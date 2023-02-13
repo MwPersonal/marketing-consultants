@@ -25,6 +25,7 @@ import {
 } from '@/styles/pages/home';
 import DiscoverAbout from '@/components/DiscoverAbout';
 import Regions from '@/components/Regions';
+import StepByStep from '@/components/StepByStep';
 
 export default function Home() {
   const theme = useTheme();
@@ -86,6 +87,8 @@ export default function Home() {
       <DiscoverAbout />
 
       <Regions />
+
+      <StepByStep />
     </>
   );
 }

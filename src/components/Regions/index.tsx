@@ -1,7 +1,5 @@
 import Image from 'next/image';
 
-import { useTheme } from 'styled-components';
-
 import catanduvaImage from '@/public/images/regions/catanduva.png';
 
 import {
@@ -13,8 +11,6 @@ import {
 } from './styles';
 
 const Regions: React.FC = () => {
-  const theme = useTheme();
-
   return (
     <ContainerComponent>
       <Badge>Veja algumas de nossas regionais</Badge>
