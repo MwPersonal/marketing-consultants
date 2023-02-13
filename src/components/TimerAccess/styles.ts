@@ -65,25 +65,6 @@ export const TimingLegend = styled.p`
   text-transform: uppercase;
 `;
 
-export const AboutMore = styled.button`
-  background-color: ${({ theme }) => theme.orange};
-  box-shadow: 0 0 50px ${({ theme }) => theme.orange};
-  border-radius: 136px;
-  font-size: 42px;
-  font-weight: 900;
-  color: ${({ theme }) => theme.currentLine};
+export const ContainerButton = styled.div`
   max-width: 770px;
-  padding: 20px;
-  border: 0;
-  margin-top: 40px;
-  cursor: pointer;
-  transition: 0.2s filter;
-
-  &:hover {
-    filter: brightness(85%);
-  }
-
-  &:active {
-    filter: brightness(120%);
-  }
 `;

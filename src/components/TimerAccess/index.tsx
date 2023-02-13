@@ -1,23 +1,18 @@
 import { useEffect, useMemo, useState } from 'react';
-import {
-  Duration,
-  formatDistance,
-  intervalToDuration,
-  subDays,
-} from 'date-fns';
+import { Duration, intervalToDuration } from 'date-fns';
 
 import {
-  AboutMore,
   Container,
+  ContainerButton,
   ContainerTimes,
   TextDescription,
   Title,
 } from './styles';
 
 import Timer from './Timer';
+import DefaultButton from '../DefaultButton';
 
 const TimerAccess: React.FC = () => {
-  // const [timerState, setTimerState] = useState(new Date());
   const [intervalDuration, setIntervalDuration] = useState<Duration | null>(
     null,
   );
@@ -56,7 +51,9 @@ const TimerAccess: React.FC = () => {
         GRATUITA e por tempo TEMPO LIMITADO para dar oportunidade para quem está
         buscando uma nova fase profissional em sua vida.
       </TextDescription>
-      <AboutMore>QUERO SABER MAIS SOBRE A OPORTUNIDADE</AboutMore>
+      <ContainerButton>
+        <DefaultButton>QUERO SABER MAIS SOBRE A OPORTUNIDADE</DefaultButton>
+      </ContainerButton>
     </Container>
   );
 };

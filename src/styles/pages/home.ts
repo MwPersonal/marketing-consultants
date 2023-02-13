@@ -5,7 +5,7 @@ export const HomeMain = styled.main`
   justify-content: center;
   grid-template-columns: repeat(12, minmax(0, 100px));
   column-gap: 20px;
-  padding-top: 60px;
+  padding: 100px 0;
 `;
 
 export const HomeTitle = styled.h1`
@@ -24,4 +24,19 @@ export const HomeDescription = styled.p`
   font-size: 25px;
   padding: 30px 0;
   color: ${({ theme }) => theme.currentLine};
+`;
+
+export const ContainerButton = styled.div`
+  grid-column-start: 4;
+  grid-column-end: 11;
+`;
+
+export const ContainerContent = styled.div`
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(12, minmax(0, 100px));
+  column-gap: 20px;
+  padding: 100px 0;
+  width: 100%;
+  background-color: #fff;
 `;

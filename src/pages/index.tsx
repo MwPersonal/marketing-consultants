@@ -6,8 +6,16 @@ import VideoPlayer from '@/components/VideoPlayer';
 
 import clubeautosImage from '@/public/images/clubeautos.png';
 
-import { HomeDescription, HomeMain, HomeTitle } from '@/styles/pages/home';
+import {
+  ContainerButton,
+  ContainerContent,
+  HomeDescription,
+  HomeMain,
+  HomeTitle,
+} from '@/styles/pages/home';
 import Benefits from '@/components/Benefits';
+import DefaultButton from '@/components/DefaultButton';
+import Consultants from '@/components/Consultants';
 
 export default function Home() {
   return (
@@ -28,10 +36,21 @@ export default function Home() {
           tentando e não conseguindo, e o melhor, você pode ter tudo isso em
           pouco tempo.
         </HomeDescription>
+
         <VideoPlayer thumbnail={clubeautosImage} />
+
+        <ContainerButton>
+          <DefaultButton>QUERO SABER MAIS SOBRE A FORMAÇÃO</DefaultButton>
+        </ContainerButton>
+
         <Benefits />
+
         <TimerAccess />
       </HomeMain>
+
+      <ContainerContent>
+        <Consultants />
+      </ContainerContent>
     </>
   );
 }
