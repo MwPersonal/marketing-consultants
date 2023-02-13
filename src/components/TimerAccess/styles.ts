@@ -8,6 +8,7 @@ export const Container = styled.div`
   grid-column-end: 13;
   border-radius: 50px;
   padding: 60px;
+  box-shadow: 0 0 65px #00000055;
   background-color: ${({ theme }) => theme.currentLine};
   display: flex;
   flex-direction: column;
@@ -19,6 +20,7 @@ export const Title = styled.h2`
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
+  font-size: 42px;
 `;
 
 export const TextDescription = styled.p`
@@ -74,4 +76,14 @@ export const AboutMore = styled.button`
   padding: 20px;
   border: 0;
   margin-top: 40px;
+  cursor: pointer;
+  transition: 0.2s filter;
+
+  &:hover {
+    filter: brightness(85%);
+  }
+
+  &:active {
+    filter: brightness(120%);
+  }
 `;

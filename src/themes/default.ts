@@ -10,7 +10,7 @@ const defaultTheme = {
   pink: `#FF79C6`,
   purple: `#988BC7`,
   red: `#E96379`,
-  yellow: `#E7DE7`,
+  yellow: `#FCD128`,
 };
 
 export default defaultTheme;

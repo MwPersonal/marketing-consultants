@@ -1,8 +1,13 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 import TimerAccess from '@/components/TimerAccess';
+import VideoPlayer from '@/components/VideoPlayer';
 
-import { HomeMain } from '@/styles/pages/home';
+import clubeautosImage from '@/public/images/clubeautos.png';
+
+import { HomeDescription, HomeMain, HomeTitle } from '@/styles/pages/home';
+import Benefits from '@/components/Benefits';
 
 export default function Home() {
   return (
@@ -14,6 +19,17 @@ export default function Home() {
       </Head>
 
       <HomeMain>
+        <HomeTitle>
+          COMO PESSOAS COMUNS ESTÃO GARANTINDO UMA PROFISSÃO NOVA NO MERCADO
+          GANHANDO ENTRE R$ 3 MIL E R$ 5 MIL JÁ NO PRIMEIRO MÊS.
+        </HomeTitle>
+        <HomeDescription>
+          Sem investir 1 centavo, sem promessas mirabulantes, sem passar meses
+          tentando e não conseguindo, e o melhor, você pode ter tudo isso em
+          pouco tempo.
+        </HomeDescription>
+        <VideoPlayer thumbnail={clubeautosImage} />
+        <Benefits />
         <TimerAccess />
       </HomeMain>
     </>

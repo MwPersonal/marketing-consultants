@@ -1,3 +1,11 @@
+import { useEffect, useMemo, useState } from 'react';
+import {
+  Duration,
+  formatDistance,
+  intervalToDuration,
+  subDays,
+} from 'date-fns';
+
 import {
   AboutMore,
   Container,
@@ -9,14 +17,38 @@ import {
 import Timer from './Timer';
 
 const TimerAccess: React.FC = () => {
+  // const [timerState, setTimerState] = useState(new Date());
+  const [intervalDuration, setIntervalDuration] = useState<Duration | null>(
+    null,
+  );
+  const timerEnd = useMemo(() => new Date(2023, 3, 1, 0, 0, 0, 0), []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIntervalDuration(
+        intervalToDuration({
+          start: new Date(),
+          end: timerEnd,
+        }),
+      );
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [timerEnd]);
+
   return (
     <Container>
       <Title>INSCRIÇÕES POR TEMPO LIMITADO</Title>
       <ContainerTimes>
-        <Timer text="26" legend="DIAS" />
-        <Timer text="13" legend="HORAS" />
-        <Timer text="28" legend="MINUTOS" />
-        <Timer text="46" legend="SEGUNDOS" />
+        <Timer text={String(intervalDuration?.days || 0)} legend="DIAS" />
+        <Timer text={String(intervalDuration?.hours || 0)} legend="HORAS" />
+        <Timer text={String(intervalDuration?.minutes || 0)} legend="MINUTOS" />
+        <Timer
+          text={String(intervalDuration?.seconds || 0)}
+          legend="SEGUNDOS"
+        />
       </ContainerTimes>
       <TextDescription>
         Estamos selecionando pessoas interessadas em uma nova profissão, e por

@@ -36,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => darken(0.1, theme.cyan)};
     border-radius: 5px;
-    transition: 0.4s background;
+    transition: 0.2s background;
   }
   ::-webkit-scrollbar-thumb:hover {
     background: ${({ theme }) => darken(0.3, theme.cyan)};
