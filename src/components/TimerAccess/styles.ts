@@ -67,4 +67,5 @@ export const TimingLegend = styled.p`
 
 export const ContainerButton = styled.div`
   max-width: 770px;
+  margin-top: 40px;
 `;

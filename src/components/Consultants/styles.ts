@@ -23,7 +23,14 @@ export const ListConsultants = styled.ul`
 `;
 
 export const Consultant = styled.li`
-  & div {
-    aspect-ratio: auto 429 / 765;
+  transition: 0.4s transform;
+
+  & img {
+    aspect-ratio: 12 / 22;
+    /* aspect-ratio: auto 429 / 765; */
+  }
+
+  &:hover {
+    transform: scale(1.04);
   }
 `;

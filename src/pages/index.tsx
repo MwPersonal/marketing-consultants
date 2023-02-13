@@ -9,6 +9,7 @@ import clubeautosImage from '@/public/images/clubeautos.png';
 import {
   ContainerButton,
   ContainerContent,
+  ContainerHowKnow,
   HomeDescription,
   HomeMain,
   HomeTitle,
@@ -16,6 +17,7 @@ import {
 import Benefits from '@/components/Benefits';
 import DefaultButton from '@/components/DefaultButton';
 import Consultants from '@/components/Consultants';
+import MissingCareer from '@/components/MissingCareer';
 
 export default function Home() {
   return (
@@ -50,6 +52,12 @@ export default function Home() {
 
       <ContainerContent>
         <Consultants />
+
+        <MissingCareer />
+
+        <ContainerHowKnow>
+          <DefaultButton>QUERO SABER COMO</DefaultButton>
+        </ContainerHowKnow>
       </ContainerContent>
     </>
   );

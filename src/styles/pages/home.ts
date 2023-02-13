@@ -27,8 +27,14 @@ export const HomeDescription = styled.p`
 `;
 
 export const ContainerButton = styled.div`
+  margin-top: 60px;
   grid-column-start: 4;
-  grid-column-end: 11;
+  grid-column-end: 10;
+`;
+
+export const ContainerHowKnow = styled.div`
+  grid-column-start: 5;
+  grid-column-end: 10;
 `;
 
 export const ContainerContent = styled.div`
@@ -36,6 +42,7 @@ export const ContainerContent = styled.div`
   justify-content: center;
   grid-template-columns: repeat(12, minmax(0, 100px));
   column-gap: 20px;
+  row-gap: 90px;
   padding: 100px 0;
   width: 100%;
   background-color: #fff;

@@ -8,9 +8,8 @@ export const Button = styled.button`
   font-weight: 900;
   color: ${({ theme }) => theme.currentLine};
   width: 100%;
-  padding: 20px;
+  padding: 30px 20px;
   border: 0;
-  margin-top: 40px;
   cursor: pointer;
   transition: 0.2s filter;
 
