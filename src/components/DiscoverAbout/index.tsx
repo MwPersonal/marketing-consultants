@@ -1,11 +1,10 @@
-import { FaCarCrash, FaCheck } from 'react-icons/fa';
+import { FaCarCrash } from 'react-icons/fa';
 import { RiFileEditFill } from 'react-icons/ri';
 import { TfiMapAlt } from 'react-icons/tfi';
 
 import { useTheme } from 'styled-components';
 
 import {
-  AtentionTitle,
   Badge,
   ContainerComponent,
   Description,

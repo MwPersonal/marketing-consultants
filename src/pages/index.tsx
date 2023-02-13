@@ -24,6 +24,7 @@ import {
   Description,
 } from '@/styles/pages/home';
 import DiscoverAbout from '@/components/DiscoverAbout';
+import Regions from '@/components/Regions';
 
 export default function Home() {
   const theme = useTheme();
@@ -83,6 +84,8 @@ export default function Home() {
       <Reason />
 
       <DiscoverAbout />
+
+      <Regions />
     </>
   );
 }

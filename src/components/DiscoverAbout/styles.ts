@@ -31,15 +31,6 @@ export const TitleComponent = styled.h2`
   text-align: center;
 `;
 
-export const AtentionTitle = styled.h1`
-  grid-column-start: 1;
-  grid-column-end: 13;
-  text-align: center;
-  font-weight: 900;
-  font-size: 42px;
-  color: ${({ theme }) => theme.selection};
-`;
-
 export const Options = styled.ul`
   grid-column-start: 2;
   grid-column-end: 12;
