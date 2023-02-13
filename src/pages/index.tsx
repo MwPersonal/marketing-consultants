@@ -23,6 +23,7 @@ import {
   HomeTitle,
   Description,
 } from '@/styles/pages/home';
+import DiscoverAbout from '@/components/DiscoverAbout';
 
 export default function Home() {
   const theme = useTheme();
@@ -80,6 +81,8 @@ export default function Home() {
       </ContainerContentCLT>
 
       <Reason />
+
+      <DiscoverAbout />
     </>
   );
 }
