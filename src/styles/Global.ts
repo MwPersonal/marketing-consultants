@@ -12,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
     font-size: 18px;
     background: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.foreground};
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    color: ${({ theme }) => theme.selection};
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
   input,

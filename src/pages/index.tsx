@@ -1,25 +1,32 @@
 import Head from 'next/head';
-import Image from 'next/image';
+
+import { useTheme } from 'styled-components';
 
 import TimerAccess from '@/components/TimerAccess';
 import VideoPlayer from '@/components/VideoPlayer';
-
-import clubeautosImage from '@/public/images/clubeautos.png';
-
-import {
-  ContainerButton,
-  ContainerContent,
-  ContainerHowKnow,
-  HomeDescription,
-  HomeMain,
-  HomeTitle,
-} from '@/styles/pages/home';
 import Benefits from '@/components/Benefits';
 import DefaultButton from '@/components/DefaultButton';
 import Consultants from '@/components/Consultants';
 import MissingCareer from '@/components/MissingCareer';
+import Reason from '@/components/Reason';
+
+import clubeautosImage from '@/public/images/clubeautos.png';
+
+import {
+  CLTTitle,
+  ContainerButton,
+  ContainerContent,
+  ContainerContentCLT,
+  ContainerHowKnow,
+  HomeDescription,
+  HomeMain,
+  HomeTitle,
+  Description,
+} from '@/styles/pages/home';
 
 export default function Home() {
+  const theme = useTheme();
+
   return (
     <>
       <Head>
@@ -50,7 +57,7 @@ export default function Home() {
         <TimerAccess />
       </HomeMain>
 
-      <ContainerContent>
+      <ContainerContent color={theme.currentLine}>
         <Consultants />
 
         <MissingCareer />
@@ -59,6 +66,20 @@ export default function Home() {
           <DefaultButton>QUERO SABER COMO</DefaultButton>
         </ContainerHowKnow>
       </ContainerContent>
+
+      <ContainerContentCLT color={theme.yellow}>
+        <CLTTitle>
+          Caso esteja procurando <b>emprego com carteira assinada (CLT)</b>, por
+          favor, <b>ESSA OPORTUNIDADE NÃO É PARA VOCÊ!</b>
+        </CLTTitle>
+        <Description>
+          Trabalhamos com pessoas que querem mudar de vida se tornando
+          empreendedores, sem limite de ganhos, com muito mais liberdade para
+          viver e proporcionar uma vida melhor pra si e pra família!
+        </Description>
+      </ContainerContentCLT>
+
+      <Reason />
     </>
   );
 }

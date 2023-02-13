@@ -37,13 +37,38 @@ export const ContainerHowKnow = styled.div`
   grid-column-end: 10;
 `;
 
-export const ContainerContent = styled.div`
+interface TContainerContent {
+  color?: string;
+}
+
+export const ContainerContent = styled.div<TContainerContent>`
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(12, minmax(0, 100px));
   column-gap: 20px;
   row-gap: 90px;
-  padding: 100px 0;
+  padding: 90px 0;
   width: 100%;
-  background-color: #fff;
+  background-color: ${({ color }) => color};
+`;
+
+export const ContainerContentCLT = styled(ContainerContent)`
+  padding: 38px 0 60px 0;
+  row-gap: 60px;
+`;
+
+export const CLTTitle = styled.h2`
+  grid-column-start: 3;
+  grid-column-end: 11;
+  font-size: 34px;
+  font-weight: normal;
+  text-align: center;
+`;
+
+export const Description = styled.p`
+  grid-column-start: 4;
+  grid-column-end: 10;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
 `;
