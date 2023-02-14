@@ -22,24 +22,24 @@ export const GlobalStyle = createGlobalStyle`
     outline: 0;
   }
   ::-webkit-scrollbar {
-    width: 4px;
+    width: 8px;
   }
   ::-moz-selection {
-    background: ${({ theme }) => theme.comment};
+    background: ${({ theme }) => theme.selection};
   }
   ::selection {
-    background: ${({ theme }) => theme.comment};
+    background: ${({ theme }) => theme.selection};
   }
   ::-webkit-scrollbar-track {
-    background: ${({ theme }) => theme.comment};
+    background: ${({ theme }) => theme.selection};
   }
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => darken(0.1, theme.cyan)};
+    background: ${({ theme }) => darken(0.1, theme.orange)};
     border-radius: 5px;
     transition: 0.2s background;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: ${({ theme }) => darken(0.3, theme.cyan)};
+    background: ${({ theme }) => darken(0.3, theme.orange)};
   }
 `;
 
