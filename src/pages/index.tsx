@@ -27,6 +27,7 @@ import DiscoverAbout from '@/components/DiscoverAbout';
 import Regions from '@/components/Regions';
 import StepByStep from '@/components/StepByStep';
 import BannerOpportunity from '@/components/BannerOpportunity';
+import FrequentlyAsked from '@/components/FrequentlyAsked';
 
 export default function Home() {
   const theme = useTheme();
@@ -92,6 +93,8 @@ export default function Home() {
       <StepByStep />
 
       <BannerOpportunity />
+
+      <FrequentlyAsked />
     </>
   );
 }
