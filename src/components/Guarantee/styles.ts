@@ -7,7 +7,7 @@ export const Container = styled.div`
   column-gap: 20px;
   width: 100%;
   background-color: ${({ theme }) => theme.background};
-  padding: 40px 0 40px 0;
+  padding: 40px 0 244px 0;
   row-gap: 40px;
   color: ${({ theme }) => theme.currentLine};
 `;

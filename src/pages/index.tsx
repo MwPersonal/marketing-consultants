@@ -29,6 +29,7 @@ import StepByStep from '@/components/StepByStep';
 import BannerOpportunity from '@/components/BannerOpportunity';
 import FrequentlyAsked from '@/components/FrequentlyAsked';
 import Guarantee from '@/components/Guarantee';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const theme = useTheme();
@@ -98,6 +99,8 @@ export default function Home() {
       <FrequentlyAsked />
 
       <Guarantee />
+
+      <Footer />
     </>
   );
 }
