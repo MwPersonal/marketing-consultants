@@ -13,44 +13,56 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  grid-column-start: 3;
-  grid-column-end: 11;
+  grid-column-start: 1;
+  grid-column-end: 13;
   text-align: center;
-  font-size: 42px;
+  font-size: 1.75rem;
   font-weight: 600;
 `;
 
-export const ContainerContent = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 13;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(12, 1fr);
-
-  & img {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    width: 100%;
-    height: auto;
-  }
-`;
-
 export const Description = styled.p`
-  grid-column-start: 6;
-  grid-column-end: 12;
-  font-size: 25px;
+  font-size: 1.35rem;
   font-weight: 500;
 `;
 
-export const ContainerForm = styled.form`
+export const ContainerContent = styled.div`
   grid-column-start: 2;
   grid-column-end: 12;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 830px) {
+    grid-template-columns: 1fr;
+
+    & img {
+      display: none;
+    }
+
+    & ${Description} {
+      text-align: center;
+    }
+  }
+`;
+
+export const ContainerForm = styled.form`
+  grid-column-start: 1;
+  grid-column-end: 13;
   background-color: ${({ theme }) => theme.currentLine};
   padding: 60px 111px;
   border-radius: 60px;
   color: ${({ theme }) => theme.background};
   box-shadow: 0 0 65px #00000055;
+
+  @media (max-width: 830px) {
+    padding: 30px;
+  }
 `;
 
 export const Completed = styled.div`
@@ -91,7 +103,7 @@ export const CompletedBar = styled.div<TCompletedBar>`
 `;
 
 export const DescriptionForm = styled.p`
-  font-size: 25px;
+  font-size: 1.35rem;
   font-weight: 600;
   margin: 30px 0;
 
@@ -112,7 +124,7 @@ export const ButtonSubmit = styled.button`
   background-color: ${({ theme }) => theme.yellow};
   cursor: pointer;
   font-weight: 900;
-  font-size: 36px;
+  font-size: 1.75rem;
   padding: 23px 0;
   border-radius: 90px;
   border: 0;

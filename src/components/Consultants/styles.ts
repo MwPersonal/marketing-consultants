@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.p`
-  font-size: 42px;
+  font-size: 1.75rem;
   font-weight: 600;
   text-align: center;
 `;
@@ -18,7 +18,8 @@ export const ListConsultants = styled.ul`
   width: 100%;
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, 270px);
+  justify-content: center;
   list-style: none;
 `;
 
@@ -27,7 +28,6 @@ export const Consultant = styled.li`
 
   & img {
     aspect-ratio: 12 / 22;
-    /* aspect-ratio: auto 429 / 765; */
   }
 
   &:hover {

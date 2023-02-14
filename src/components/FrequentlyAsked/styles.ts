@@ -20,7 +20,7 @@ export const ListAccordion = styled.div`
 `;
 
 export const Description = styled.p`
-  font-size: 21px;
+  font-size: 1.35rem;
   font-weight: 600;
   padding: 21px 18px 21px 18px;
 `;

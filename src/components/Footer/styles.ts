@@ -10,7 +10,7 @@ export const Container = styled.footer`
 `;
 
 export const Title = styled.h3`
-  font-size: 25px;
+  font-size: 1.35rem;
 `;
 
 export const Item = styled.p`

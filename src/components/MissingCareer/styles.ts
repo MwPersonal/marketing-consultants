@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Title = styled.div`
   grid-column-start: 1;
   grid-column-end: 13;
-  font-size: 42px;
+  font-size: 1.75rem;
   font-weight: 600;
   text-align: center;
 `;
@@ -29,12 +29,22 @@ export const ImageRepresent = styled.div`
     border-radius: 15px;
     box-shadow: 0 0 15px #00000055;
   }
+
+  @media (max-width: 900px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 `;
 
 export const ContainerContent = styled.div`
   grid-column-start: 6;
   grid-column-end: 13;
   display: flex;
+
+  @media (max-width: 900px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 `;
 
 export const Description = styled.p`

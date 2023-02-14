@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  /* width: 80%; */
   grid-column-start: 1;
   grid-column-end: 13;
   border-radius: 50px;
@@ -18,25 +17,35 @@ export const Title = styled.h2`
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
-  font-size: 42px;
+  font-size: 1.75rem;
 `;
 
 export const TextDescription = styled.p`
   margin-top: 40px;
   text-align: center;
   width: 66.66%;
-  font-size: 21px;
+  font-size: 1.35rem;
   font-weight: 600;
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 
 export const ContainerTimes = styled.div`
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 160px);
   align-items: center;
   justify-content: center;
   align-self: center;
-  font-size: 42px;
+  font-size: 1.75rem;
   margin-top: 40px;
   gap: 25px;
+
+  @media (max-width: 470px) {
+    display: none;
+  }
 `;
 
 export const ContainerTiming = styled.div`
@@ -50,10 +59,10 @@ export const TimingText = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 175px;
-  height: 175px;
-  border-radius: 175px;
-  font-size: 68px;
+  width: 160px;
+  height: 160px;
+  border-radius: 160px;
+  font-size: 3rem;
   font-weight: 600;
   border: 5px solid ${({ theme }) => theme.selection};
 `;

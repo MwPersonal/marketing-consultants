@@ -16,17 +16,29 @@ export const Badge = styled.div`
   grid-column-end: 10;
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.yellow};
-  font-size: 25px;
+  font-size: 1.35rem;
+  padding: 0 15px;
   line-height: 50px;
   font-weight: 600;
   border-radius: 25px;
   text-align: center;
+
+  @media (max-width: 900px) {
+    grid-column-start: 2;
+    grid-column-end: 12;
+  }
+
+  @media (max-width: 500px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 `;
 
 export const ListRegions = styled.ul`
   grid-column-start: 2;
   grid-column-end: 12;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(auto-fill, 270px);
   gap: 30px;
   list-style: none;

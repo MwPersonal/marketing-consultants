@@ -4,11 +4,11 @@ export const Button = styled.button`
   background-color: ${({ theme }) => theme.orange};
   box-shadow: 0 0 50px ${({ theme }) => theme.orange}77;
   border-radius: 136px;
-  font-size: 42px;
+  font-size: 1.75rem;
   font-weight: 900;
   color: ${({ theme }) => theme.currentLine};
   width: 100%;
-  padding: 30px 20px;
+  padding: 30px;
   border: 0;
   cursor: pointer;
   transition: 0.2s filter;

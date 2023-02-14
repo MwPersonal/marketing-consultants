@@ -4,7 +4,8 @@ export const Container = styled.div`
   grid-column-start: 2;
   grid-column-end: 12;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 300px));
+  justify-content: center;
   gap: 50px;
   margin: 60px 0;
 `;

@@ -16,7 +16,7 @@ export const Title = styled.h2`
   grid-column-start: 2;
   grid-column-end: 12;
   text-align: center;
-  font-size: 42px;
+  font-size: 1.75rem;
   font-weight: 600;
 
   & b {
@@ -28,11 +28,26 @@ export const Description = styled.p`
   grid-column-start: 3;
   grid-column-end: 11;
   text-align: center;
-  font-size: 21px;
+  font-size: 1.35rem;
   font-weight: 600;
+
+  @media (max-width: 900px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 `;
 
 export const ContainerButton = styled.div`
   grid-column-start: 4;
   grid-column-end: 10;
+
+  @media (max-width: 900px) {
+    grid-column-start: 2;
+    grid-column-end: 12;
+  }
+
+  @media (max-width: 500px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 `;

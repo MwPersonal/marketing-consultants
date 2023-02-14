@@ -51,6 +51,6 @@ export const ContainerHeader = styled.div`
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.currentLine};
-  font-size: 25px;
+  font-size: 1.35rem;
   font-weight: 600;
 `;
