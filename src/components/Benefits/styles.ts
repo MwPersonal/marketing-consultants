@@ -4,10 +4,19 @@ export const Container = styled.div`
   grid-column-start: 2;
   grid-column-end: 12;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1fr, 300px));
+  grid-template-columns: repeat(auto-fit, 300px);
   justify-content: center;
   gap: 50px;
   margin: 60px 0;
+
+  @media (max-width: 600px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+
+  @media (max-width: 350px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const BenefitItem = styled.div`

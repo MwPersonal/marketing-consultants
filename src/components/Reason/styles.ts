@@ -55,13 +55,17 @@ export const Options = styled.ul`
   grid-column-start: 2;
   grid-column-end: 12;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1fr, 400px));
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   list-style: none;
 
   @media (max-width: 500px) {
     grid-column-start: 1;
     grid-column-end: 13;
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
