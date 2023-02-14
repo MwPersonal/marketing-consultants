@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef } from 'react';
+import { ReactNode, useRef } from 'react';
 import { useState } from 'react';
 
 import { useTheme } from 'styled-components';
@@ -19,10 +19,6 @@ const Accordion: React.FC<{
   const theme = useTheme();
 
   const bodyRef = useRef(null);
-
-  // useEffect(() => {
-  //   console.log();
-  // }, [bodyRef]);
 
   return (
     <Container

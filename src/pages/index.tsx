@@ -28,6 +28,7 @@ import Regions from '@/components/Regions';
 import StepByStep from '@/components/StepByStep';
 import BannerOpportunity from '@/components/BannerOpportunity';
 import FrequentlyAsked from '@/components/FrequentlyAsked';
+import Guarantee from '@/components/Guarantee';
 
 export default function Home() {
   const theme = useTheme();
@@ -95,6 +96,8 @@ export default function Home() {
       <BannerOpportunity />
 
       <FrequentlyAsked />
+
+      <Guarantee />
     </>
   );
 }

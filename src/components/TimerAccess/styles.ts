@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { ColumnLayout } from '@/styles/Global';
-
 export const Container = styled.div`
   /* width: 80%; */
   grid-column-start: 1;
