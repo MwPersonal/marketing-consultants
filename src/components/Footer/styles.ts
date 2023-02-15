@@ -11,10 +11,9 @@ export const Container = styled.footer`
   & a {
     text-decoration: none;
     color: ${({ theme }) => theme.foreground};
-    transition: 0.4s filter;
 
-    &:hover {
-      filter: brightness(75%);
+    &:hover p {
+      opacity: 1;
     }
   }
 `;
@@ -27,4 +26,5 @@ export const Item = styled.p`
   opacity: 0.7;
   cursor: pointer;
   text-align: center;
+  transition: 0.4s opacity;
 `;
