@@ -1,5 +1,11 @@
 import Image from 'next/image';
 
+import { useInView } from 'react-intersection-observer';
+
+import CounterNumberCrescent from '../CounterNumberCrescent';
+
+import DefaultTextInput from '../DefaultTextInput';
+
 import guaranteeImage from '@/public/images/guarantee.png';
 
 import {
@@ -15,9 +21,27 @@ import {
   ListInput,
   Title,
 } from './styles';
-import DefaultTextInput from '../DefaultTextInput';
+
+const CompletedNumber = () => {
+  return (
+    <Completed>
+      <CompletedText>
+        <b>
+          <CounterNumberCrescent duration={3} number={95} />%
+        </b>
+        {` `}
+        completo
+      </CompletedText>
+      <CompletedBar porcentage={95} />
+    </Completed>
+  );
+};
 
 const Guarantee: React.FC = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <Container>
       <Title>GARANTIA INCONDICIONAL</Title>
@@ -31,13 +55,8 @@ const Guarantee: React.FC = () => {
         </Description>
       </ContainerContent>
 
-      <ContainerForm>
-        <Completed>
-          <CompletedText>
-            <b>95%</b> completo
-          </CompletedText>
-          <CompletedBar porcentage={95} />
-        </Completed>
+      <ContainerForm ref={ref}>
+        {inView && <CompletedNumber />}
         <DescriptionForm>
           Quanto custa pra você não alcançar seus objetivos profissionais?
           <br />

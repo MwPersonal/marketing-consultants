@@ -23,6 +23,11 @@ export const GlobalStyle = createGlobalStyle`
   textarea {
     outline: 0;
   }
+
+  img {
+    user-select: none;
+  }
+
   ::-webkit-scrollbar {
     width: 8px;
   }

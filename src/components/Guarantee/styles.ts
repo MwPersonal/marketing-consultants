@@ -75,6 +75,10 @@ export const Completed = styled.div`
 
 export const CompletedText = styled.p`
   font-size: 18px;
+
+  & span {
+    font-size: 18px;
+  }
 `;
 
 interface TCompletedBar {
@@ -89,6 +93,15 @@ export const CompletedBar = styled.div<TCompletedBar>`
   position: relative;
   overflow: hidden;
 
+  @keyframes widthStart {
+    from {
+      width: 0;
+    }
+    to {
+      width: ${({ porcentage }) => porcentage}%;
+    }
+  }
+
   &::before {
     content: '';
     left: 0;
@@ -96,9 +109,10 @@ export const CompletedBar = styled.div<TCompletedBar>`
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     display: block;
-    width: ${({ porcentage }) => porcentage}%;
     height: 15px;
     background-color: ${({ theme }) => theme.orange};
+    width: ${({ porcentage }) => porcentage}%;
+    animation: widthStart 3s ease-in-out;
   }
 `;
 
