@@ -9,7 +9,11 @@ const VideoPlayer: React.FC<{
 
   return (
     <ContainerVideoPlayer>
-      <ImageBackground src={thumbnail} alt="Thumbnail video" />
+      <ImageBackground
+        src={thumbnail}
+        alt="Thumbnail video"
+        placeholder="blur"
+      />
       <Play size={82} color={theme.yellow} />
     </ContainerVideoPlayer>
   );

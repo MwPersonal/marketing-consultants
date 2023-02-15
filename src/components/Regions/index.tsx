@@ -18,7 +18,13 @@ const Regions: React.FC = () => {
         {[...new Array(12)].map((_, index) => (
           <Region key={`region-${index}`}>
             <RegionTitle>Catanduva - SP</RegionTitle>
-            <Image src={catanduvaImage} alt="Region" width={270} height={270} />
+            <Image
+              src={catanduvaImage}
+              alt="Region"
+              width={270}
+              height={270}
+              placeholder="blur"
+            />
           </Region>
         ))}
       </ListRegions>

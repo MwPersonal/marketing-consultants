@@ -14,7 +14,7 @@ const MissingCareer: React.FC = () => {
     <Container>
       <Title>O QUE ESTÁ FALTANDO PARA VOCÊ É UMA CARREIRA!</Title>
       <ImageRepresent>
-        <Image src={carecaImage} alt="Careca image" />
+        <Image src={carecaImage} alt="Careca image" placeholder="blur" />
       </ImageRepresent>
       <ContainerContent>
         <Description>

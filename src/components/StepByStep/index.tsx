@@ -20,7 +20,11 @@ const StepByStep: React.FC = () => {
       <ListStep>
         <StepItem>
           <ContainerImage>
-            <StepImage src={libraryImage} alt="Library image" />
+            <StepImage
+              src={libraryImage}
+              alt="Library image"
+              placeholder="blur"
+            />
           </ContainerImage>
           <StepTitle>1. VOCÊ PASSARÁ POR UM PROCESSO SELETIVO</StepTitle>
           <StepDescription>
@@ -31,7 +35,11 @@ const StepByStep: React.FC = () => {
         </StepItem>
         <StepItem>
           <ContainerImage>
-            <StepImage src={homeOfficeImage} alt="Home office image" />
+            <StepImage
+              src={homeOfficeImage}
+              alt="Home office image"
+              placeholder="blur"
+            />
           </ContainerImage>
           <StepTitle>
             2. FORMAÇÃO EAD PROFISSIONAL EM CONSULTOR DE PROTEÇÃO VEICULAR
@@ -44,7 +52,7 @@ const StepByStep: React.FC = () => {
         </StepItem>
         <StepItem>
           <ContainerImage>
-            <StepImage src={happyImage} alt="Happy image" />
+            <StepImage src={happyImage} alt="Happy image" placeholder="blur" />
           </ContainerImage>
           <StepTitle>
             3. VOCÊ ESTARÁ PRONTO PARA COMEÇAR SUA CARREIRA E INICIAR SEUS

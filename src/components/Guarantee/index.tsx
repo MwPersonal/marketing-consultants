@@ -46,7 +46,7 @@ const Guarantee: React.FC = () => {
     <Container>
       <Title>GARANTIA INCONDICIONAL</Title>
       <ContainerContent>
-        <Image src={guaranteeImage} alt="Guarantee" />
+        <Image src={guaranteeImage} alt="Guarantee" placeholder="blur" />
         <Description>
           Garantimos que ao final da sua formação você receberá uma mentoria com
           um especialista que irá te direcionar em todos os passos para iniciar
