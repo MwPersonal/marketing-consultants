@@ -2,21 +2,20 @@ import { DefaultDescription, DefaultSubTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 12;
+  grid-column: 2 / 12;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(3, minmax(0, 400px));
   justify-content: center;
   gap: 50px;
   margin: 60px 0;
 
-  @media (max-width: 600px) {
-    grid-column-start: 1;
-    grid-column-end: 13;
+  @media (max-width: 1200px) {
+    grid-column: 1 / 13;
+    gap: 15px;
   }
 
-  @media (max-width: 350px) {
-    grid-template-columns: repeat(1, 1fr);
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(1, minmax(0, 600px));
   }
 `;
 
@@ -41,7 +40,7 @@ export const BenefitContent = styled.div`
   gap: 12px;
 `;
 
-export const BenefitTitle = styled(DefaultSubTitle)`
+export const BenefitTitle = styled(DefaultDescription)`
   /* font-size: 18px; */
   font-weight: bold;
 `;
