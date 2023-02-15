@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@vercel/analytics": "0.1.8",
     "date-fns": "2.29.3",
     "next": "13.1.6",
     "polished": "4.2.2",
