@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import { useTheme } from 'styled-components';
+
 import { ListOptions } from './ListOptions';
 
 import {

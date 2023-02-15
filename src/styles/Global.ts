@@ -1,12 +1,20 @@
 import { darken } from 'polished';
 import styled, { createGlobalStyle } from 'styled-components';
+import { Montserrat } from '@next/font/google';
+
+const montserrat = Montserrat({
+  // eslint-disable-next-line prettier/prettier, @typescript-eslint/quotes
+  subsets: ['latin'],
+});
 
 export const GlobalStyle = createGlobalStyle`
   * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    font-family: ${
+      montserrat.style.fontFamily
+    }, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
