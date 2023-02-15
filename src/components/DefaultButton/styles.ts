@@ -1,4 +1,5 @@
-import { DefaultSubTitle, DefaultTitle } from '@/styles/Global';
+import { DefaultSubTitle } from '@/styles/Global';
+
 import styled from 'styled-components';
 
 export const Button = styled.button`

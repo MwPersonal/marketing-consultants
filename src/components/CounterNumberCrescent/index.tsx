@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
+
 import { CounterNumber } from './styles';
 
 const CounterNumberCrescent: React.FC<{
