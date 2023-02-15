@@ -1,3 +1,4 @@
+import { DefaultDescription, DefaultTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -8,12 +9,18 @@ export const Container = styled.div`
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
   gap: 30px;
+
+  @media (max-width: 350px) {
+    gap: 0;
+    row-gap: 20px;
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 `;
 
-export const Title = styled.div`
+export const Title = styled(DefaultTitle)`
   grid-column-start: 1;
   grid-column-end: 13;
-  font-size: 1.75rem;
   font-weight: 600;
   text-align: center;
 `;
@@ -47,7 +54,10 @@ export const ContainerContent = styled.div`
   }
 `;
 
-export const Description = styled.p`
+export const Description = styled(DefaultDescription)`
   white-space: pre-wrap;
-  font-size: 21px;
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;

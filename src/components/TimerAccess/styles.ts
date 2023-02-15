@@ -1,3 +1,8 @@
+import {
+  DefaultDescription,
+  DefaultSubTitle,
+  DefaultTitle,
+} from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -11,21 +16,26 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 600px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 350px) {
+    padding: 30px 10px;
+  }
 `;
 
-export const Title = styled.h2`
+export const Title = styled(DefaultTitle)`
   text-transform: uppercase;
   text-align: center;
-  font-weight: 600;
-  font-size: 1.75rem;
+  /* font-weight: 600; */
 `;
 
-export const TextDescription = styled.p`
+export const TextDescription = styled(DefaultDescription)`
   margin-top: 40px;
   text-align: center;
   width: 66.66%;
-  font-size: 1.35rem;
-  font-weight: 600;
 
   @media (max-width: 700px) {
     width: 100%;
@@ -39,7 +49,6 @@ export const ContainerTimes = styled.div`
   align-items: center;
   justify-content: center;
   align-self: center;
-  font-size: 1.75rem;
   margin-top: 40px;
   gap: 25px;
 
@@ -67,8 +76,7 @@ export const TimingText = styled.p`
   border: 5px solid ${({ theme }) => theme.selection};
 `;
 
-export const TimingLegend = styled.p`
-  font-size: 21px;
+export const TimingLegend = styled(DefaultDescription)`
   text-transform: uppercase;
 `;
 

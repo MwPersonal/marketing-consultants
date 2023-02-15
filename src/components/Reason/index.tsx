@@ -7,6 +7,7 @@ import {
   Description,
   Option,
   Options,
+  OptionText,
   TitleComponent,
 } from './styles';
 
@@ -24,11 +25,11 @@ const Reason: React.FC = () => {
       <Options>
         <Option>
           <FaCheck color={theme.orange} />
-          Vantagens similares
+          <OptionText>Vantagens similares</OptionText>
         </Option>
         <Option>
           <FaCheck color={theme.orange} />
-          Preço muito abaixo
+          <OptionText>Preço muito abaixo</OptionText>
         </Option>
       </Options>
       <Description>

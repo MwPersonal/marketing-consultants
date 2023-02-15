@@ -1,3 +1,4 @@
+import { DefaultTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -8,8 +9,7 @@ export const Container = styled.div`
   gap: 30px;
 `;
 
-export const Title = styled.p`
-  font-size: 1.75rem;
+export const Title = styled(DefaultTitle)`
   font-weight: 600;
   text-align: center;
 `;

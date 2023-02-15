@@ -7,10 +7,16 @@ export const Container = styled.footer`
   flex-direction: column;
   align-items: center;
   gap: 10px;
-`;
 
-export const Title = styled.h3`
-  font-size: 1.35rem;
+  & a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.foreground};
+    transition: 0.4s filter;
+
+    &:hover {
+      filter: brightness(75%);
+    }
+  }
 `;
 
 export const Item = styled.p`
@@ -19,4 +25,6 @@ export const Item = styled.p`
   gap: 8px;
   font-weight: 600;
   opacity: 0.7;
+  cursor: pointer;
+  text-align: center;
 `;

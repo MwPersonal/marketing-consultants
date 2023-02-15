@@ -1,3 +1,4 @@
+import { DefaultSubTitle } from '@/styles/Global';
 import { BsCaretDownFill } from 'react-icons/bs';
 import styled from 'styled-components';
 
@@ -39,7 +40,6 @@ export const ContainerHeader = styled.div`
   gap: 20px;
   cursor: pointer;
   display: flex;
-  align-items: center;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   transition: 0.4s filter;
@@ -49,8 +49,9 @@ export const ContainerHeader = styled.div`
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled(DefaultSubTitle)`
+  flex: 1;
   color: ${({ theme }) => theme.currentLine};
-  font-size: 1.35rem;
   font-weight: 600;
+  align-self: center;
 `;

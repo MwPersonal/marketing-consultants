@@ -1,3 +1,4 @@
+import { DefaultDescription, DefaultSubTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -40,13 +41,12 @@ export const BenefitContent = styled.div`
   gap: 12px;
 `;
 
-export const BenefitTitle = styled.p`
-  font-size: 18px;
+export const BenefitTitle = styled(DefaultSubTitle)`
+  /* font-size: 18px; */
   font-weight: bold;
 `;
 
-export const BenefitDescription = styled.p`
-  font-size: 14px;
+export const BenefitDescription = styled(DefaultDescription)`
   font-weight: 500;
   color: ${({ theme }) => theme.currentLine};
 `;

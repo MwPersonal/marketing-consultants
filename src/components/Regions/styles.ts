@@ -1,3 +1,4 @@
+import { DefaultDescription, DefaultSubTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const ContainerComponent = styled.div`
@@ -7,19 +8,17 @@ export const ContainerComponent = styled.div`
   column-gap: 20px;
   width: 100%;
   background-color: ${({ theme }) => theme.currentLine};
-  padding: 40px 0 40px 0;
+  padding: 40px 10px 40px 10px;
   row-gap: 40px;
 `;
 
-export const Badge = styled.div`
+export const Badge = styled(DefaultSubTitle)`
   grid-column-start: 4;
   grid-column-end: 10;
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.yellow};
-  font-size: 1.35rem;
   padding: 0 15px;
   line-height: 50px;
-  font-weight: 600;
   border-radius: 25px;
   text-align: center;
 
@@ -68,10 +67,9 @@ export const Region = styled.li`
   }
 `;
 
-export const RegionTitle = styled.p`
+export const RegionTitle = styled(DefaultDescription)`
   width: calc(100% - 30px);
   margin-bottom: 15px;
-  font-size: 21px;
   border-radius: 46px;
   line-height: 46px;
   font-weight: bold;

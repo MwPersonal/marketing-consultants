@@ -1,3 +1,4 @@
+import { DefaultSubTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -19,8 +20,6 @@ export const ListAccordion = styled.div`
   gap: 30px;
 `;
 
-export const Description = styled.p`
-  font-size: 1.35rem;
-  font-weight: 600;
+export const Description = styled(DefaultSubTitle)`
   padding: 21px 18px 21px 18px;
 `;

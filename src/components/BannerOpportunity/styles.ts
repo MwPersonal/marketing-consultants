@@ -1,3 +1,4 @@
+import { DefaultSubTitle, DefaultTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const ContainerOpportunity = styled.div`
@@ -7,16 +8,15 @@ export const ContainerOpportunity = styled.div`
   column-gap: 20px;
   width: 100%;
   background-color: ${({ theme }) => theme.background};
-  padding: 40px 0 40px 0;
+  padding: 40px 10px 40px 10px;
   row-gap: 40px;
   color: ${({ theme }) => theme.currentLine};
 `;
 
-export const Title = styled.h2`
+export const Title = styled(DefaultTitle)`
   grid-column-start: 2;
   grid-column-end: 12;
   text-align: center;
-  font-size: 1.75rem;
   font-weight: 600;
 
   & b {
@@ -24,11 +24,10 @@ export const Title = styled.h2`
   }
 `;
 
-export const Description = styled.p`
+export const Description = styled(DefaultSubTitle)`
   grid-column-start: 3;
   grid-column-end: 11;
   text-align: center;
-  font-size: 1.35rem;
   font-weight: 600;
 
   @media (max-width: 900px) {

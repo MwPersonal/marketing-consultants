@@ -1,12 +1,10 @@
+import { DefaultSubTitle, DefaultTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Button = styled.button`
   background-color: ${({ theme }) => theme.orange};
   box-shadow: 0 0 50px ${({ theme }) => theme.orange}77;
   border-radius: 136px;
-  font-size: 1.75rem;
-  font-weight: 900;
-  color: ${({ theme }) => theme.currentLine};
   width: 100%;
   padding: 30px;
   border: 0;
@@ -19,5 +17,14 @@ export const Button = styled.button`
 
   &:active {
     filter: brightness(120%);
+  }
+`;
+
+export const ButtonText = styled(DefaultSubTitle)`
+  color: ${({ theme }) => theme.currentLine};
+  font-weight: 900;
+
+  @media (max-width: 450px) {
+    font-weight: 700;
   }
 `;

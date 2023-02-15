@@ -34,4 +34,9 @@ export const ContainerVideoPlayer = styled.div`
   &:hover ${ImageBackground} {
     filter: brightness(40%);
   }
+
+  @media (max-width: 700px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 `;

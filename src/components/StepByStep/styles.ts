@@ -1,3 +1,4 @@
+import { DefaultDescription, DefaultTitle } from '@/styles/Global';
 import Image from 'next/image';
 import styled from 'styled-components';
 
@@ -8,15 +9,14 @@ export const Container = styled.div`
   column-gap: 20px;
   width: 100%;
   background-color: ${({ theme }) => theme.currentLine};
-  padding: 40px 0 40px 0;
+  padding: 40px 10px 40px 10px;
   row-gap: 40px;
 `;
 
-export const Title = styled.h2`
+export const Title = styled(DefaultTitle)`
   grid-column-start: 2;
   grid-column-end: 12;
   text-align: center;
-  font-size: 1.75rem;
   font-weight: 600;
 `;
 
@@ -58,12 +58,9 @@ export const StepImage = styled(Image)`
   opacity: 0.6;
 `;
 
-export const StepTitle = styled.h3`
-  font-size: 21px;
+export const StepTitle = styled(DefaultDescription)`
   text-align: center;
+  font-weight: bold;
 `;
 
-export const StepDescription = styled.p`
-  font-size: 21px;
-  font-weight: 500;
-`;
+export const StepDescription = styled(DefaultDescription)``;

@@ -27,7 +27,7 @@ const Accordion: React.FC<{
       height={(bodyRef?.current as any)?.scrollHeight || 0}
     >
       <ContainerHeader>
-        <Indicator size={28} color={theme.currentLine} />
+        <Indicator size={26} color={theme.currentLine} />
         <Title>{title}</Title>
       </ContainerHeader>
       <ContainerBody ref={bodyRef}>{children}</ContainerBody>

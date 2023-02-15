@@ -1,3 +1,4 @@
+import { DefaultDescription, DefaultSubTitle } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const ContainerInput = styled.section`
@@ -6,17 +7,20 @@ export const ContainerInput = styled.section`
   gap: 10px;
 `;
 
-export const Label = styled.label`
+export const Label = styled(DefaultSubTitle).attrs({
+  as: `label`,
+})`
   color: ${({ theme }) => theme.selection};
   font-weight: 600;
 `;
 
-export const Input = styled.input`
+export const Input = styled(DefaultDescription).attrs({
+  as: `input`,
+})`
   border: 2px solid ${({ theme }) => theme.gray};
   background-color: ${({ theme }) => theme.grayLigthed};
   color: gray;
   padding: 18px 25px;
-  font-size: 18px;
   font-weight: 600;
   border-radius: 15px;
   color: ${({ theme }) => theme.comment};

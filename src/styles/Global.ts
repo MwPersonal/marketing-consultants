@@ -56,3 +56,51 @@ export const ColumnLayout = styled.div`
   grid-template-columns: repeat(12, 100px);
   column-gap: 20px; */
 `;
+
+export const DefaultTitle = styled.h1`
+  font-size: 1.75rem;
+
+  @media (max-width: 750px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.45rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.15rem;
+  }
+`;
+
+export const DefaultSubTitle = styled.h2`
+  font-size: 1.35rem;
+
+  @media (max-width: 750px) {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.15rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 0.9rem;
+  }
+`;
+
+export const DefaultDescription = styled.p`
+  font-size: 1.125rem;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+  }
+`;

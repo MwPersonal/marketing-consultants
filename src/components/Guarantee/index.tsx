@@ -10,6 +10,7 @@ import guaranteeImage from '@/public/images/guarantee.png';
 
 import {
   ButtonSubmit,
+  ButtonText,
   Completed,
   CompletedBar,
   CompletedText,
@@ -104,7 +105,9 @@ const Guarantee: React.FC = () => {
             placeholder="exemplo@exemplo.exemplo"
           />
           <DefaultTextInput label="Celular:" placeholder="(99) 99999-9999" />
-          <ButtonSubmit>PARTICIPAR</ButtonSubmit>
+          <ButtonSubmit>
+            <ButtonText>PARTICIPAR</ButtonText>
+          </ButtonSubmit>
         </ListInput>
       </ContainerForm>
     </Container>

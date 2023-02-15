@@ -1,29 +1,39 @@
 import styled from 'styled-components';
 
+import { DefaultDescription, DefaultSubTitle, DefaultTitle } from '../Global';
+
 export const HomeMain = styled.main`
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(12, minmax(0, 100px));
   column-gap: 20px;
-  padding: 100px 0;
+  padding: 100px 10px;
+
+  @media (max-width: 1024px) {
+    padding: 40px 10px;
+  }
 `;
 
-export const HomeTitle = styled.h1`
-  font-size: 1.75rem;
+export const HomeTitle = styled(DefaultTitle)`
   grid-column-start: 1;
   grid-column-end: 13;
   text-align: center;
-  font-weight: bold;
+  font-weight: 900;
   color: ${({ theme }) => theme.yellow};
 `;
 
-export const HomeDescription = styled.p`
+export const HomeDescription = styled(DefaultSubTitle)`
   grid-column-start: 3;
   grid-column-end: 11;
   text-align: center;
-  font-size: 1.35rem;
+  font-weight: 400;
   padding: 30px 0;
   color: ${({ theme }) => theme.currentLine};
+
+  @media (max-width: 750px) {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
 `;
 
 export const ContainerButton = styled.div`
@@ -62,7 +72,7 @@ export const ContainerContent = styled.div<TContainerContent>`
   grid-template-columns: repeat(12, minmax(0, 100px));
   column-gap: 20px;
   row-gap: 90px;
-  padding: 90px 0;
+  padding: 90px 10px;
   width: 100%;
   background-color: ${({ color }) => color};
 `;
@@ -72,10 +82,9 @@ export const ContainerContentCLT = styled(ContainerContent)`
   row-gap: 60px;
 `;
 
-export const CLTTitle = styled.h2`
+export const CLTTitle = styled(DefaultTitle)`
   grid-column-start: 3;
   grid-column-end: 11;
-  font-size: 1.75rem;
   font-weight: normal;
   text-align: center;
 
@@ -90,12 +99,10 @@ export const CLTTitle = styled.h2`
   }
 `;
 
-export const Description = styled.p`
+export const Description = styled(DefaultDescription)`
   grid-column-start: 4;
   grid-column-end: 10;
   text-align: center;
-  font-size: 21px;
-  font-weight: 600;
 
   @media (max-width: 900px) {
     grid-column-start: 2;

@@ -1,3 +1,8 @@
+import {
+  DefaultDescription,
+  DefaultSubTitle,
+  DefaultTitle,
+} from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -7,21 +12,22 @@ export const Container = styled.div`
   column-gap: 20px;
   width: 100%;
   background-color: ${({ theme }) => theme.background};
-  padding: 40px 0 244px 0;
+  padding: 40px 10px 144px 10px;
   row-gap: 40px;
   color: ${({ theme }) => theme.currentLine};
+
+  @media (max-width: 500px) {
+    padding: 40px 10px 40px 10px;
+  }
 `;
 
-export const Title = styled.h2`
+export const Title = styled(DefaultTitle)`
   grid-column-start: 1;
   grid-column-end: 13;
   text-align: center;
-  font-size: 1.75rem;
-  font-weight: 600;
 `;
 
-export const Description = styled.p`
-  font-size: 1.35rem;
+export const Description = styled(DefaultDescription)`
   font-weight: 500;
 `;
 
@@ -35,15 +41,15 @@ export const ContainerContent = styled.div`
 
   & img {
     width: 100%;
+    max-width: 400px;
+    margin: auto;
     height: auto;
   }
 
   @media (max-width: 830px) {
     grid-template-columns: 1fr;
-
-    & img {
-      display: none;
-    }
+    grid-column-start: 1;
+    grid-column-end: 13;
 
     & ${Description} {
       text-align: center;
@@ -61,7 +67,11 @@ export const ContainerForm = styled.form`
   box-shadow: 0 0 65px #00000055;
 
   @media (max-width: 830px) {
-    padding: 30px;
+    padding: 40px;
+  }
+
+  @media (max-width: 450px) {
+    padding: 40px 20px;
   }
 `;
 
@@ -114,10 +124,17 @@ export const CompletedBar = styled.div<TCompletedBar>`
     width: ${({ porcentage }) => porcentage}%;
     animation: widthStart 3s ease-in-out;
   }
+
+  @media (max-width: 500px) {
+    width: 75%;
+  }
+
+  @media (max-width: 350px) {
+    width: 95%;
+  }
 `;
 
-export const DescriptionForm = styled.p`
-  font-size: 1.35rem;
+export const DescriptionForm = styled(DefaultDescription)`
   font-weight: 600;
   margin: 30px 0;
 
@@ -131,14 +148,16 @@ export const ListInput = styled.div`
   flex-direction: column;
   gap: 30px;
   padding: 0 15px;
+
+  @media (max-width: 450px) {
+    padding: 0;
+  }
 `;
 
 export const ButtonSubmit = styled.button`
   width: 100%;
   background-color: ${({ theme }) => theme.yellow};
   cursor: pointer;
-  font-weight: 900;
-  font-size: 1.75rem;
   padding: 23px 0;
   border-radius: 90px;
   border: 0;
@@ -150,4 +169,8 @@ export const ButtonSubmit = styled.button`
     filter: brightness(85%);
     box-shadow: 0 0 20px #00000055;
   }
+`;
+
+export const ButtonText = styled(DefaultTitle)`
+  font-weight: 900;
 `;

@@ -1,11 +1,15 @@
 import type { ReactNode } from 'react';
 
-import { Button } from './styles';
+import { Button, ButtonText } from './styles';
 
 const DefaultButton: React.FC<{
   children: ReactNode;
 }> = ({ children }) => {
-  return <Button>{children}</Button>;
+  return (
+    <Button>
+      <ButtonText>{children}</ButtonText>
+    </Button>
+  );
 };
 
 export default DefaultButton;
