@@ -29,7 +29,6 @@ export const Container = styled.div`
 export const Title = styled(DefaultTitle)`
   text-transform: uppercase;
   text-align: center;
-  /* font-weight: 600; */
 `;
 
 export const TextDescription = styled(DefaultDescription)`
@@ -45,7 +44,7 @@ export const TextDescription = styled(DefaultDescription)`
 export const ContainerTimes = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 160px);
+  grid-template-columns: repeat(4, minmax(0, 160px));
   align-items: center;
   justify-content: center;
   align-self: center;
@@ -53,7 +52,11 @@ export const ContainerTimes = styled.div`
   gap: 25px;
 
   @media (max-width: 470px) {
-    display: none;
+    gap: 10px;
+  }
+
+  @media (max-width: 320px) {
+    gap: 5px;
   }
 `;
 
@@ -64,20 +67,26 @@ export const ContainerTiming = styled.div`
   gap: 15px;
 `;
 
-export const TimingText = styled.p`
+export const TimingText = styled(DefaultTitle)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 160px;
-  height: 160px;
-  border-radius: 160px;
-  font-size: 3rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
   font-weight: 600;
   border: 5px solid ${({ theme }) => theme.selection};
 `;
 
 export const TimingLegend = styled(DefaultDescription)`
   text-transform: uppercase;
+
+  @media (max-width: 450px) {
+    font-size: 0.6rem;
+  }
+  @media (max-width: 280px) {
+    font-size: 0.5rem;
+  }
 `;
 
 export const ContainerButton = styled.div`
