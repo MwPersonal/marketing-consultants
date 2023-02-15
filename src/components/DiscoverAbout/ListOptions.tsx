@@ -15,21 +15,21 @@ export const ListOptions = () => {
       <Option>
         <RiFileEditFill size={128} color={theme.orange} />
         <OptionTitle>
-          + <CounterNumberCrescent duration={3} number={15000} />
+          + <CounterNumberCrescent duration={5} number={15000} />
         </OptionTitle>
         <OptionDescription>associados</OptionDescription>
       </Option>
       <Option>
         <TfiMapAlt size={128} color={theme.orange} />
         <OptionTitle>
-          + <CounterNumberCrescent duration={3} number={20} />
+          + <CounterNumberCrescent duration={5} number={20} />
         </OptionTitle>
         <OptionDescription>regionais</OptionDescription>
       </Option>
       <Option>
         <FaCarCrash size={128} color={theme.orange} />
         <OptionTitle>
-          + <CounterNumberCrescent duration={3} number={5000} />
+          + <CounterNumberCrescent duration={5} number={5000} />
         </OptionTitle>
         <OptionDescription>ocorrências atendidas</OptionDescription>
       </Option>
