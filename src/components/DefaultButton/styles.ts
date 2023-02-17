@@ -7,7 +7,7 @@ export const Button = styled.button`
   box-shadow: 0 0 50px ${({ theme }) => theme.orange}77;
   border-radius: 136px;
   width: 100%;
-  padding: 30px;
+  padding: 15px;
   border: 0;
   cursor: pointer;
   transition: 0.2s filter;

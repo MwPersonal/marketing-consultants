@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import Image from 'next/image';
+
+import DefaultButton from '../DefaultButton';
 
 import catanduvaImage from '@/public/images/regions/catanduva.png';
 
 import {
   Badge,
+  ContainerButton,
   ContainerComponent,
   ListRegions,
   Region,
@@ -11,11 +15,13 @@ import {
 } from './styles';
 
 const Regions: React.FC = () => {
+  const [listRegions, setListRegions] = useState([...new Array(4)]);
+
   return (
     <ContainerComponent>
       <Badge>Veja algumas de nossas regionais</Badge>
       <ListRegions>
-        {[...new Array(12)].map((_, index) => (
+        {listRegions.map((_, index) => (
           <Region key={`region-${index}`}>
             <RegionTitle>Catanduva - SP</RegionTitle>
             <Image
@@ -28,6 +34,11 @@ const Regions: React.FC = () => {
           </Region>
         ))}
       </ListRegions>
+      {listRegions.length < 12 && (
+        <ContainerButton onClick={() => setListRegions([...new Array(12)])}>
+          <DefaultButton>VER MAIS REGIONAIS</DefaultButton>
+        </ContainerButton>
+      )}
     </ContainerComponent>
   );
 };

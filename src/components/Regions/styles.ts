@@ -17,8 +17,8 @@ export const Badge = styled(DefaultSubTitle)`
   grid-column-end: 10;
   background-color: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.yellow};
-  padding: 0 15px;
-  line-height: 50px;
+  padding: 10px 15px;
+  line-height: 24px;
   border-radius: 25px;
   text-align: center;
 
@@ -89,4 +89,19 @@ export const RegionTitle = styled(DefaultDescription)`
   z-index: 2;
   color: ${({ theme }) => theme.currentLine};
   background-color: ${({ theme }) => theme.orange};
+`;
+
+export const ContainerButton = styled.div`
+  grid-column-start: 5;
+  grid-column-end: 9;
+
+  @media (max-width: 900px) {
+    grid-column-start: 3;
+    grid-column-end: 11;
+  }
+
+  @media (max-width: 400px) {
+    grid-column-start: 2;
+    grid-column-end: 12;
+  }
 `;

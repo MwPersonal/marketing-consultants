@@ -23,7 +23,6 @@ export const Badge = styled(DefaultSubTitle)`
   color: ${({ theme }) => theme.yellow};
   padding: 0 15px;
   line-height: 50px;
-  font-weight: 600;
   border-radius: 25px;
   text-align: center;
 
