@@ -21,7 +21,6 @@ export const Container = styled.div`
 export const Title = styled(DefaultTitle)`
   grid-column-start: 1;
   grid-column-end: 13;
-  font-weight: 600;
   text-align: center;
 `;
 

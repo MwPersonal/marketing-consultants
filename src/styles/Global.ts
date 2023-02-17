@@ -111,4 +111,8 @@ export const DefaultDescription = styled.p`
   @media (max-width: 500px) {
     font-size: 0.8rem;
   }
+
+  @media (max-width: 320px) {
+    font-size: 0.7rem;
+  }
 `;

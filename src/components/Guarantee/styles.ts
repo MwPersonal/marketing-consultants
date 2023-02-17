@@ -1,6 +1,6 @@
 import { DefaultDescription, DefaultTitle } from '@/styles/Global';
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
@@ -64,6 +64,7 @@ export const ContainerForm = styled.form`
   box-shadow: 0 0 65px #00000055;
 
   @media (max-width: 830px) {
+    border-radius: 15px;
     padding: 40px;
   }
 
@@ -92,6 +93,11 @@ interface TCompletedBar {
   porcentage: number;
 }
 
+const slide = keyframes`
+  from  { background-position: 0 0; }
+  to    { background-position: 40px 0; }
+`;
+
 export const CompletedBar = styled.div<TCompletedBar>`
   width: 50%;
   height: 15px;
@@ -113,13 +119,25 @@ export const CompletedBar = styled.div<TCompletedBar>`
     content: '';
     left: 0;
     top: 0;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
     display: block;
     height: 15px;
-    background-color: ${({ theme }) => theme.orange};
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     width: ${({ porcentage }) => porcentage}%;
+    background-size: 40px 40px;
+    background-color: ${({ theme }) => theme.yellow};
+    background-image: linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.05) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.05) 50%,
+      rgba(0, 0, 0, 0.05) 75%,
+      transparent 75%,
+      transparent
+    );
     animation: widthStart 3s ease-in-out;
+    animation: 0.5s linear infinite ${slide};
   }
 
   @media (max-width: 500px) {
@@ -131,12 +149,29 @@ export const CompletedBar = styled.div<TCompletedBar>`
   }
 `;
 
-export const DescriptionForm = styled(DefaultDescription)`
-  font-weight: 600;
+export const DescriptionForm = styled.p`
+  font-weight: 500;
   margin: 30px 0;
+  font-size: 1.125rem;
+  line-height: 1.225rem;
 
   & b {
     font-weight: 900;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    line-height: 1.1rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 0.7rem;
+    line-height: 0.8rem;
   }
 `;
 

@@ -41,7 +41,6 @@ export const Badge = styled(DefaultSubTitle)`
 export const TitleComponent = styled(DefaultTitle)`
   grid-column-start: 2;
   grid-column-end: 12;
-  font-weight: 600;
   text-align: center;
 `;
 

@@ -78,8 +78,8 @@ export const ContainerContent = styled.div<TContainerContent>`
 `;
 
 export const ContainerContentCLT = styled(ContainerContent)`
-  padding: 38px 0 60px 0;
-  row-gap: 60px;
+  padding: 30px 0 30px 0;
+  row-gap: 20px;
 `;
 
 export const CLTTitle = styled(DefaultTitle)`
@@ -107,6 +107,7 @@ export const Description = styled(DefaultDescription)`
   @media (max-width: 900px) {
     grid-column-start: 2;
     grid-column-end: 12;
+    padding: 0 15px;
   }
 
   @media (max-width: 500px) {

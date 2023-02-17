@@ -10,7 +10,6 @@ export const Container = styled.div`
 `;
 
 export const Title = styled(DefaultTitle)`
-  font-weight: 600;
   text-align: center;
 `;
 

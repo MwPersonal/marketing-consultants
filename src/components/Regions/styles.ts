@@ -41,6 +41,16 @@ export const ListRegions = styled.ul`
   grid-template-columns: repeat(auto-fill, 270px);
   gap: 30px;
   list-style: none;
+
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+
+  @media (max-width: 600px) {
+    gap: 10px;
+  }
 `;
 
 export const Region = styled.li`
@@ -59,6 +69,8 @@ export const Region = styled.li`
   }
 
   & img {
+    width: 100%;
+    height: auto;
     border-radius: 15px;
     transform: scale(1.1);
     transition-duration: 0.4s;
@@ -68,10 +80,9 @@ export const Region = styled.li`
 `;
 
 export const RegionTitle = styled(DefaultDescription)`
-  width: calc(100% - 30px);
   margin-bottom: 15px;
   border-radius: 46px;
-  line-height: 46px;
+  padding: 5px 10px;
   font-weight: bold;
   text-align: center;
   position: absolute;

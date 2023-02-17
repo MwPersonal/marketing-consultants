@@ -17,7 +17,6 @@ export const Title = styled(DefaultTitle)`
   grid-column-start: 2;
   grid-column-end: 12;
   text-align: center;
-  font-weight: 600;
 `;
 
 export const ListStep = styled.ul`

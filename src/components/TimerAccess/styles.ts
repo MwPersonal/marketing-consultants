@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   grid-column-start: 1;
   grid-column-end: 13;
-  border-radius: 50px;
+  border-radius: 60px;
   padding: 60px;
   box-shadow: 0 0 65px #00000055;
   background-color: ${({ theme }) => theme.currentLine};
@@ -13,6 +13,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 830px) {
+    border-radius: 15px;
+  }
 
   @media (max-width: 600px) {
     padding: 30px;
