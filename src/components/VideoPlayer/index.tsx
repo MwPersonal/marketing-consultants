@@ -13,6 +13,9 @@ const VideoPlayer: React.FC<{
         src={thumbnail}
         alt="Thumbnail video"
         placeholder="blur"
+        sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
       />
       <Play size={82} color={theme.yellow} />
     </ContainerVideoPlayer>
