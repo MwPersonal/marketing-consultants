@@ -136,8 +136,7 @@ export const CompletedBar = styled.div<TCompletedBar>`
       transparent 75%,
       transparent
     );
-    animation: widthStart 3s ease-in-out;
-    animation: 0.5s linear infinite ${slide};
+    animation: widthStart 3s ease-in-out, 0.5s linear infinite ${slide};
   }
 
   @media (max-width: 500px) {
