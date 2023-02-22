@@ -7,10 +7,12 @@ import VideoPlayer from '../VideoPlayer';
 
 import { Consultant, Container, ListConsultants, Title } from './styles';
 
-const Consultants: React.FC = () => {
+const Consultants: React.FC<{
+  title: string;
+}> = ({ title }) => {
   return (
     <Container>
-      <Title>VEJA OS CONSULTORES QUE SE FORMARAM E TIVERAM SUCESSO</Title>
+      <Title>{title}</Title>
       <ListConsultants>
         <Consultant>
           <VideoPlayer thumbnail={hugoImage} />

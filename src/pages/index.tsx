@@ -65,7 +65,7 @@ export default function Home() {
       </HomeMain>
 
       <ContainerContent color={theme.currentLine}>
-        <Consultants />
+        <Consultants title="VEJA OS CONSULTORES QUE SE FORMARAM E TIVERAM SUCESSO" />
 
         <MissingCareer />
 

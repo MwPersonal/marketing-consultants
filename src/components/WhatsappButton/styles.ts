@@ -9,8 +9,8 @@ export const Container = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 52px;
-  bottom: 52px;
+  right: 24px;
+  bottom: 24px;
   background-color: #25d366;
   box-shadow: 0 0 20px #00000055;
   transition-duration: 0.4s;

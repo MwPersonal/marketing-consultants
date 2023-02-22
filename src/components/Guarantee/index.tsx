@@ -38,23 +38,29 @@ const CompletedNumber = () => {
   );
 };
 
-const Guarantee: React.FC = () => {
+const Guarantee: React.FC<{
+  showGuarantee?: boolean;
+}> = ({ showGuarantee = true }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
 
   return (
     <Container>
-      <Title>GARANTIA INCONDICIONAL</Title>
-      <ContainerContent>
-        <Image src={guaranteeImage} alt="Guarantee" placeholder="blur" />
-        <Description>
-          Garantimos que ao final da sua formação você receberá uma mentoria com
-          um especialista que irá te direcionar em todos os passos para iniciar
-          suas vendas e sua carreira de consultor de Proteção Veicular Clube
-          Autos.
-        </Description>
-      </ContainerContent>
+      {showGuarantee && (
+        <>
+          <Title>GARANTIA INCONDICIONAL</Title>
+          <ContainerContent>
+            <Image src={guaranteeImage} alt="Guarantee" placeholder="blur" />
+            <Description>
+              Garantimos que ao final da sua formação você receberá uma mentoria
+              com um especialista que irá te direcionar em todos os passos para
+              iniciar suas vendas e sua carreira de consultor de Proteção
+              Veicular Clube Autos.
+            </Description>
+          </ContainerContent>
+        </>
+      )}
 
       <ContainerForm ref={ref}>
         {inView && <CompletedNumber />}
