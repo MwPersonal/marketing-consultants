@@ -21,7 +21,7 @@ const LeavePage: React.FC<{
       <Rodal
         customStyles={{
           padding: 0,
-          borderRadius: 70,
+          borderRadius: 30,
           display: `flex`,
           flexDirection: `column`,
         }}

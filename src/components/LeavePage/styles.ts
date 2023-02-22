@@ -32,8 +32,8 @@ export const HeaderModal = styled.header`
   align-items: center;
   padding: 35px;
   background-color: ${({ theme }) => theme.yellow};
-  border-top-left-radius: 70px;
-  border-top-right-radius: 70px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 
   @media (max-width: 800px) {
     flex-direction: column-reverse;
