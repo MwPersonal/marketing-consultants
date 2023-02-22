@@ -55,8 +55,7 @@ export const ContainerContent = styled.div`
 `;
 
 export const ContainerForm = styled.form`
-  grid-column-start: 1;
-  grid-column-end: 13;
+  grid-column: 2 / 12;
   background-color: ${({ theme }) => theme.currentLine};
   padding: 60px 111px;
   border-radius: 60px;
@@ -64,6 +63,7 @@ export const ContainerForm = styled.form`
   box-shadow: 0 0 65px #00000055;
 
   @media (max-width: 830px) {
+    grid-column: 1 / 13;
     border-radius: 15px;
     padding: 40px;
   }

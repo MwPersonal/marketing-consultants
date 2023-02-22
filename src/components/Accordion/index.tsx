@@ -22,11 +22,10 @@ const Accordion: React.FC<{
 
   return (
     <Container
-      onClick={() => setIsOpened((state) => !state)}
       isOpened={isOpened}
       height={(bodyRef?.current as any)?.scrollHeight || 0}
     >
-      <ContainerHeader>
+      <ContainerHeader onClick={() => setIsOpened((state) => !state)}>
         <Indicator size={26} color={theme.currentLine} />
         <Title>{title}</Title>
       </ContainerHeader>

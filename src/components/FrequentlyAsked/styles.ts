@@ -22,4 +22,5 @@ export const ListAccordion = styled.div`
 
 export const Description = styled(DefaultSubTitle)`
   padding: 21px 18px 21px 18px;
+  font-weight: 600;
 `;
