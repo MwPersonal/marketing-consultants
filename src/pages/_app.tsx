@@ -17,13 +17,13 @@ import 'rodal/lib/rodal.css';
 export default function App({ Component, pageProps }: AppProps) {
   const [leavingState, setLeavingState] = useState(false);
 
-  // useEffect(() => {
-  //   if (window) {
-  //     document.onmouseleave = () => {
-  //       setLeavingState(true);
-  //     };
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (document) {
+      document.onmouseleave = () => {
+        setLeavingState(true);
+      };
+    }
+  }, []);
 
   return (
     <>

@@ -2,18 +2,9 @@ import Head from 'next/head';
 
 import { useTheme } from 'styled-components';
 
-import TimerAccess from '@/components/TimerAccess';
 import VideoPlayer from '@/components/VideoPlayer';
-import Benefits from '@/components/Benefits';
 import DefaultButton from '@/components/DefaultButton';
 import Consultants from '@/components/Consultants';
-import MissingCareer from '@/components/MissingCareer';
-import Reason from '@/components/Reason';
-import DiscoverAbout from '@/components/DiscoverAbout';
-import Regions from '@/components/Regions';
-import StepByStep from '@/components/StepByStep';
-import BannerOpportunity from '@/components/BannerOpportunity';
-import FrequentlyAsked from '@/components/FrequentlyAsked';
 import Guarantee from '@/components/Guarantee';
 import Footer from '@/components/Footer';
 
@@ -24,7 +15,6 @@ import {
   ContainerButton,
   ContainerContent,
   ContainerContentCLT,
-  ContainerHowKnow,
   HomeDescription,
   HomeMain,
   HomeTitle,
@@ -34,6 +24,7 @@ import {
   ContainerButtonOportunity,
   ListDetail,
 } from '@/styles/pages/consultor';
+
 import CardDetail from '@/components/CardDetail';
 
 export default function Home() {

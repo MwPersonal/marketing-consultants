@@ -53,21 +53,6 @@ export const ContainerButton = styled.div`
   }
 `;
 
-export const ContainerHowKnow = styled.div`
-  grid-column-start: 5;
-  grid-column-end: 10;
-
-  @media (max-width: 900px) {
-    grid-column-start: 2;
-    grid-column-end: 12;
-  }
-
-  @media (max-width: 500px) {
-    grid-column-start: 1;
-    grid-column-end: 13;
-  }
-`;
-
 interface TContainerContent {
   color?: string;
 }

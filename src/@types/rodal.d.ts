@@ -22,6 +22,7 @@ declare module 'rodal' {
     onAnimationEnd?: () => never;
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
   const Rodal = (_: RodalProps): JSX.Element => {};
   export = Rodal;
 }

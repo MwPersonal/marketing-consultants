@@ -1,4 +1,4 @@
-import { DefaultDescription, DefaultSubTitle } from '@/styles/Global';
+import { DefaultDescription } from '@/styles/Global';
 import styled from 'styled-components';
 
 export const Container = styled.div`
