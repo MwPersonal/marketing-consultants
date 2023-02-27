@@ -7,6 +7,8 @@ import DefaultButton from '@/components/DefaultButton';
 import Consultants from '@/components/Consultants';
 import Guarantee from '@/components/Guarantee';
 import Footer from '@/components/Footer';
+import CardDetail from '@/components/CardDetail';
+import AnimationBackground from '@/components/AnimationBackground';
 
 import clubeautosImage from '@/public/images/clubeautos.png';
 
@@ -23,9 +25,8 @@ import {
   OportunityTitle,
   ContainerButtonOportunity,
   ListDetail,
+  Container,
 } from '@/styles/pages/consultor';
-
-import CardDetail from '@/components/CardDetail';
 
 export default function Home() {
   const theme = useTheme();
@@ -38,27 +39,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
 
-      <HomeMain>
-        <HomeTitle>
-          GANHE DINHEIRO FAZENDO SEU AMIGO ECONOMIZAR O DELE
-        </HomeTitle>
-        <HomeSubTitle>
-          NOVA PROFISSÃO QUE ESTÁ FAZENDO PESSOAS COMUNS FATURAREM DE 3 A 5 MIL
-          REAIS LOGO NOS PRIMEIROS MÊSES
-        </HomeSubTitle>
-        <HomeDescription>
-          Não é sobre vender cursos, você não precisa fazer nenhum investimento
-          e não é marketing multinível ou pirâmide! É uma oportunidade de
-          crescimento, de você ser seu próprio chefe e mudar a sua realidade
-          financeira!
-        </HomeDescription>
+      <Container>
+        <AnimationBackground />
+        <HomeMain>
+          <HomeTitle>
+            GANHE DINHEIRO FAZENDO SEU AMIGO ECONOMIZAR O DELE
+          </HomeTitle>
+          <HomeSubTitle>
+            NOVA PROFISSÃO QUE ESTÁ FAZENDO PESSOAS COMUNS FATURAREM DE 3 A 5
+            MIL REAIS LOGO NOS PRIMEIROS MÊSES
+          </HomeSubTitle>
+          <HomeDescription>
+            Não é sobre vender cursos, você não precisa fazer nenhum
+            investimento e não é marketing multinível ou pirâmide! É uma
+            oportunidade de crescimento, de você ser seu próprio chefe e mudar a
+            sua realidade financeira!
+          </HomeDescription>
 
-        <VideoPlayer thumbnail={clubeautosImage} />
+          <VideoPlayer thumbnail={clubeautosImage} />
 
-        <ContainerButton>
-          <DefaultButton>QUERO AUMENTAR MINHA RENDA</DefaultButton>
-        </ContainerButton>
-      </HomeMain>
+          <ContainerButton>
+            <DefaultButton>QUERO AUMENTAR MINHA RENDA</DefaultButton>
+          </ContainerButton>
+        </HomeMain>
+      </Container>
 
       <ContainerContent color={theme.currentLine}>
         <Consultants title="VEJA O RESULTADO DE QUEM JÁ ESTÁ VIVENDO DESSA NOVA PROFISSÃO" />

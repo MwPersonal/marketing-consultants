@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 import { DefaultDescription, DefaultSubTitle, DefaultTitle } from '../Global';
 
+export const Container = styled.div`
+  position: relative;
+`;
+
 export const HomeMain = styled.main`
   display: grid;
   justify-content: center;

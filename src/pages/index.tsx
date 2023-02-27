@@ -9,6 +9,14 @@ import DefaultButton from '@/components/DefaultButton';
 import Consultants from '@/components/Consultants';
 import MissingCareer from '@/components/MissingCareer';
 import Reason from '@/components/Reason';
+import DiscoverAbout from '@/components/DiscoverAbout';
+import Regions from '@/components/Regions';
+import StepByStep from '@/components/StepByStep';
+import BannerOpportunity from '@/components/BannerOpportunity';
+import FrequentlyAsked from '@/components/FrequentlyAsked';
+import Guarantee from '@/components/Guarantee';
+import Footer from '@/components/Footer';
+import AnimationBackground from '@/components/AnimationBackground';
 
 import clubeautosImage from '@/public/images/clubeautos.png';
 
@@ -22,18 +30,11 @@ import {
   HomeMain,
   HomeTitle,
   Description,
+  Container,
 } from '@/styles/pages/home';
-import DiscoverAbout from '@/components/DiscoverAbout';
-import Regions from '@/components/Regions';
-import StepByStep from '@/components/StepByStep';
-import BannerOpportunity from '@/components/BannerOpportunity';
-import FrequentlyAsked from '@/components/FrequentlyAsked';
-import Guarantee from '@/components/Guarantee';
-import Footer from '@/components/Footer';
 
 export default function Home() {
   const theme = useTheme();
-
   return (
     <>
       <Head>
@@ -42,27 +43,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
 
-      <HomeMain>
-        <HomeTitle>
-          COMO PESSOAS COMUNS ESTÃO GARANTINDO UMA PROFISSÃO NOVA NO MERCADO
-          GANHANDO ENTRE R$ 3 MIL E R$ 5 MIL JÁ NO PRIMEIRO MÊS.
-        </HomeTitle>
-        <HomeDescription>
-          Sem investir 1 centavo, sem promessas mirabulantes, sem passar meses
-          tentando e não conseguindo, e o melhor, você pode ter tudo isso em
-          pouco tempo.
-        </HomeDescription>
+      <Container>
+        <AnimationBackground />
+        <HomeMain>
+          <HomeTitle>
+            COMO PESSOAS COMUNS ESTÃO GARANTINDO UMA PROFISSÃO NOVA NO MERCADO
+            GANHANDO ENTRE R$ 3 MIL E R$ 5 MIL JÁ NO PRIMEIRO MÊS.
+          </HomeTitle>
+          <HomeDescription>
+            Sem investir 1 centavo, sem promessas mirabulantes, sem passar meses
+            tentando e não conseguindo, e o melhor, você pode ter tudo isso em
+            pouco tempo.
+          </HomeDescription>
 
-        <VideoPlayer thumbnail={clubeautosImage} />
+          <VideoPlayer thumbnail={clubeautosImage} />
 
-        <ContainerButton>
-          <DefaultButton>QUERO SABER MAIS SOBRE A FORMAÇÃO</DefaultButton>
-        </ContainerButton>
+          <ContainerButton>
+            <DefaultButton>QUERO SABER MAIS SOBRE A FORMAÇÃO</DefaultButton>
+          </ContainerButton>
 
-        <Benefits />
+          <Benefits />
 
-        <TimerAccess />
-      </HomeMain>
+          <TimerAccess />
+        </HomeMain>
+      </Container>
 
       <ContainerContent color={theme.currentLine}>
         <Consultants title="VEJA OS CONSULTORES QUE SE FORMARAM E TIVERAM SUCESSO" />

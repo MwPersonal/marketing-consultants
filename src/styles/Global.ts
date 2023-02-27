@@ -1,6 +1,7 @@
 import { darken } from 'polished';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Montserrat } from '@next/font/google';
+import Particles from 'react-tsparticles';
 
 const montserrat = Montserrat({
   // eslint-disable-next-line prettier/prettier, @typescript-eslint/quotes
@@ -114,5 +115,16 @@ export const DefaultDescription = styled.p`
 
   @media (max-width: 320px) {
     font-size: 0.7rem;
+  }
+`;
+
+export const AnimationParticles = styled(Particles)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  & canvas {
+    top: 0 !important;
   }
 `;
