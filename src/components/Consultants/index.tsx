@@ -17,28 +17,28 @@ const Consultants: React.FC<{
         <Consultant>
           <VideoPlayer
             thumbnail={oneImage}
-            link="https://www.youtube.com/embed/P198hIINV4s"
+            link="https://www.youtube.com/embed/P198hIINV4s?autoplay=1"
             title="COMO FUI DA FALÊNCIA AO SUCESSO COM PROTEÇÃO VEICULAR?"
           />
         </Consultant>
         <Consultant>
           <VideoPlayer
             thumbnail={twoImage}
-            link="https://www.youtube.com/embed/1fX_IouHAGc"
+            link="https://www.youtube.com/embed/1fX_IouHAGc?autoplay=1"
             title="COMO CONQUISTEI A ESTABILIDADE FINANCEIRA?"
           />
         </Consultant>
         <Consultant>
           <VideoPlayer
             thumbnail={threeImage}
-            link="https://www.youtube.com/embed/gwbxwALoq8I"
+            link="https://www.youtube.com/embed/gwbxwALoq8I?autoplay=1"
             title="COMO PROTEÇÃO VEICULAR MUDOU MINHA VIDA?"
           />
         </Consultant>
         <Consultant>
           <VideoPlayer
             thumbnail={fourImage}
-            link="https://www.youtube.com/embed/p86LxkdMIgw"
+            link="https://www.youtube.com/embed/p86LxkdMIgw?autoplay=1"
             title="DO SALÁRIO MÍNIMO À LIBERDADE FINANCEIRA?"
           />
         </Consultant>
