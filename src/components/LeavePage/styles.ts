@@ -1,4 +1,5 @@
 import { DefaultSubTitle } from '@/styles/Global';
+import defaultTheme from '@/themes/default';
 import { FaTimes } from 'react-icons/fa';
 import styled from 'styled-components';
 
@@ -31,7 +32,7 @@ export const HeaderModal = styled.header`
   display: flex;
   align-items: center;
   padding: 35px;
-  background-color: ${({ theme }) => theme.yellow};
+  background-color: ${({ theme }) => theme.yellow || defaultTheme.yellow};
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 

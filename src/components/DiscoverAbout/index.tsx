@@ -12,6 +12,7 @@ import {
 const DiscoverAbout: React.FC = () => {
   const { inView, ref } = useInView({
     triggerOnce: true,
+    delay: 100,
   });
 
   return (

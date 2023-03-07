@@ -1,10 +1,11 @@
 import { DefaultSubTitle } from '@/styles/Global';
+import defaultTheme from '@/themes/default';
 
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.orange};
-  box-shadow: 0 0 50px ${({ theme }) => theme.orange}77;
+  background-color: ${({ theme }) => theme.orange || defaultTheme.orange};
+  box-shadow: 0 0 50px ${({ theme }) => theme.orange || defaultTheme.orange}77;
   border-radius: 136px;
   width: 100%;
   padding: 25px;
@@ -22,7 +23,7 @@ export const Button = styled.button`
 `;
 
 export const ButtonText = styled(DefaultSubTitle)`
-  color: ${({ theme }) => theme.currentLine};
+  color: ${({ theme }) => theme.currentLine || defaultTheme.currentLine};
   font-weight: 900;
 
   @media (max-width: 450px) {

@@ -7,6 +7,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media (max-width: 500px) {
+    grid-column: 13 / 1;
+  }
+
+  /* @media (max-width: 750px) {
+    grid-column: 12 / 2;
+  } */
 `;
 
 export const Title = styled(DefaultTitle)`
@@ -16,18 +24,18 @@ export const Title = styled(DefaultTitle)`
 export const ListConsultants = styled.ul`
   width: 100%;
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, 270px);
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   list-style: none;
+
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Consultant = styled.li`
   transition: 0.4s transform;
-
-  & img {
-    aspect-ratio: 12 / 22;
-  }
 
   &:hover {
     transform: scale(1.04);

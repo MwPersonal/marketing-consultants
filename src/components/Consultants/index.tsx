@@ -1,7 +1,7 @@
-import hugoImage from '@/public/images/hugo.png';
-import rafaImage from '@/public/images/rafa.png';
-import diegoImage from '@/public/images/diego.png';
-import leticiaImage from '@/public/images/leticia.png';
+import oneImage from '@/public/images/consultants/one.jpeg';
+import twoImage from '@/public/images/consultants/two.jpeg';
+import threeImage from '@/public/images/consultants/three.jpeg';
+import fourImage from '@/public/images/consultants/four.jpeg';
 
 import VideoPlayer from '../VideoPlayer';
 
@@ -15,16 +15,32 @@ const Consultants: React.FC<{
       <Title>{title}</Title>
       <ListConsultants>
         <Consultant>
-          <VideoPlayer thumbnail={hugoImage} />
+          <VideoPlayer
+            thumbnail={oneImage}
+            link="https://www.youtube.com/embed/P198hIINV4s"
+            title="COMO FUI DA FALÊNCIA AO SUCESSO COM PROTEÇÃO VEICULAR?"
+          />
         </Consultant>
         <Consultant>
-          <VideoPlayer thumbnail={rafaImage} />
+          <VideoPlayer
+            thumbnail={twoImage}
+            link="https://www.youtube.com/embed/1fX_IouHAGc"
+            title="COMO CONQUISTEI A ESTABILIDADE FINANCEIRA?"
+          />
         </Consultant>
         <Consultant>
-          <VideoPlayer thumbnail={diegoImage} />
+          <VideoPlayer
+            thumbnail={threeImage}
+            link="https://www.youtube.com/embed/gwbxwALoq8I"
+            title="COMO PROTEÇÃO VEICULAR MUDOU MINHA VIDA?"
+          />
         </Consultant>
         <Consultant>
-          <VideoPlayer thumbnail={leticiaImage} />
+          <VideoPlayer
+            thumbnail={fourImage}
+            link="https://www.youtube.com/embed/p86LxkdMIgw"
+            title="DO SALÁRIO MÍNIMO À LIBERDADE FINANCEIRA?"
+          />
         </Consultant>
       </ListConsultants>
     </Container>

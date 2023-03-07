@@ -30,13 +30,16 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={defaultTheme}>
         <Component {...pageProps} />
         <WhatsappButton />
-        <LeavePage
-          isVisible={leavingState}
-          onClose={() => setLeavingState(false)}
-        />
 
         <GlobalStyle />
       </ThemeProvider>
+
+      <div id="portal"></div>
+
+      <LeavePage
+        isVisible={leavingState}
+        onClose={() => setLeavingState(false)}
+      />
       <Analytics />
     </>
   );

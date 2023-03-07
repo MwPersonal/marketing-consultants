@@ -38,6 +38,7 @@
     "react-intersection-observer": "9.4.2",
     "react-tsparticles": "2.9.3",
     "rodal": "2.0.1",
+    "sharp": "0.31.3",
     "styled-components": "5.3.6",
     "tsparticles": "2.9.3"
   },
