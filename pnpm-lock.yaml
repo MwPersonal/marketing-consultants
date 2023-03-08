@@ -35,6 +35,7 @@ specifiers:
   styled-components: 5.3.6
   tsparticles: 2.9.3
   typescript: 4.9.5
+  use-debounce: 9.0.3
 
 dependencies:
   '@next/font': 13.1.6
@@ -51,6 +52,7 @@ dependencies:
   sharp: 0.31.3
   styled-components: 5.3.6_biqbaboplfbrettd7655fr4n2y
   tsparticles: 2.9.3
+  use-debounce: 9.0.3_react@18.2.0
 
 devDependencies:
   '@commitlint/cli': 17.4.2
@@ -4529,6 +4531,15 @@ packages:
     dependencies:
       punycode: 2.1.1
     dev: true
+
+  /use-debounce/9.0.3_react@18.2.0:
+    resolution: {integrity: sha512-FhtlbDtDXILJV7Lix5OZj5yX/fW1tzq+VrvK1fnT2bUrPOGruU9Rw8NCEn+UI9wopfERBEZAOQ8lfeCJPllgnw==}
+    engines: {node: '>= 10.0.0'}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}

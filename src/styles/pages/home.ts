@@ -20,8 +20,7 @@ export const HomeMain = styled.main`
 `;
 
 export const HomeTitle = styled(DefaultTitle)`
-  grid-column-start: 1;
-  grid-column-end: 13;
+  grid-column: 1 / 13;
   text-align: center;
   font-weight: 900;
   color: ${({ theme }) => theme.yellow};

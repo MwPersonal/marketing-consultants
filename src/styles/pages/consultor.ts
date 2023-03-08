@@ -9,6 +9,7 @@ export const Container = styled.div`
 export const HomeMain = styled.main`
   display: grid;
   justify-content: center;
+  position: relative;
   grid-template-columns: repeat(12, minmax(0, 100px));
   column-gap: 20px;
   padding: 100px 10px;

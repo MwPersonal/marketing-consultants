@@ -32,6 +32,7 @@ import {
   Description,
   Container,
 } from '@/styles/pages/home';
+import WhatsappButton from '@/components/WhatsappButton';
 
 export default function Home() {
   const theme = useTheme();
@@ -103,6 +104,8 @@ export default function Home() {
       <FrequentlyAsked />
 
       <Guarantee />
+
+      <WhatsappButton />
 
       <Footer />
     </>

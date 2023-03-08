@@ -13,14 +13,27 @@ import WhatsappButton from '@/components/WhatsappButton';
 import LeavePage from '@/components/LeavePage';
 
 import 'rodal/lib/rodal.css';
+import { useDebouncedCallback } from 'use-debounce';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [leavingState, setLeavingState] = useState(false);
 
+  const onMouseLeave = useDebouncedCallback(
+    () => setLeavingState(true),
+    5 * 60 * 1000,
+    { maxWait: 5 * 60 * 1000, leading: true },
+  );
+
   useEffect(() => {
     if (document) {
-      document.onmouseleave = () => {
-        setLeavingState(true);
+      document.onmouseleave = (event) => {
+        if (
+          event.clientY <= 0 ||
+          event.clientX <= 0 ||
+          event.clientX >= window.innerWidth ||
+          event.clientY >= window.innerHeight
+        )
+          onMouseLeave();
       };
     }
   }, []);
@@ -29,17 +42,16 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <ThemeProvider theme={defaultTheme}>
         <Component {...pageProps} />
-        <WhatsappButton />
 
         <GlobalStyle />
+        <LeavePage
+          isVisible={leavingState}
+          onClose={() => setLeavingState(false)}
+        />
       </ThemeProvider>
 
       <div id="portal"></div>
 
-      <LeavePage
-        isVisible={leavingState}
-        onClose={() => setLeavingState(false)}
-      />
       <Analytics />
     </>
   );

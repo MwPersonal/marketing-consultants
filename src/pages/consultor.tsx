@@ -27,6 +27,7 @@ import {
   ListDetail,
   Container,
 } from '@/styles/pages/consultor';
+import WhatsappButton from '@/components/WhatsappButton';
 
 export default function Home() {
   const theme = useTheme();
@@ -116,6 +117,8 @@ export default function Home() {
       </ContainerContent>
 
       <Guarantee showGuarantee={false} />
+
+      <WhatsappButton />
 
       <Footer />
     </>

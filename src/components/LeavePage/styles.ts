@@ -32,12 +32,11 @@ export const HeaderModal = styled.header`
   display: flex;
   align-items: center;
   padding: 35px;
-  background-color: ${({ theme }) => theme.yellow || defaultTheme.yellow};
+  background-color: ${({ theme }) => theme.yellow};
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
   @media (max-width: 800px) {
-    flex-direction: column-reverse;
     height: auto;
     padding: 20px;
     gap: 15px;
@@ -54,6 +53,19 @@ export const Title = styled(DefaultSubTitle)`
 export const CloseButton = styled(FaTimes)`
   margin: 0 20px;
   cursor: pointer;
+  width: 20px;
+
+  @media (max-width: 750px) {
+    width: 15px;
+  }
+
+  @media (max-width: 600px) {
+    width: 15px;
+  }
+
+  @media (max-width: 500px) {
+    width: 15px;
+  }
 `;
 
 export const ContainerContent = styled.div`
