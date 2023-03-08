@@ -28,6 +28,7 @@ import {
   Container,
 } from '@/styles/pages/consultor';
 import WhatsappButton from '@/components/WhatsappButton';
+import LocalVideoPlayer from '@/components/LocalVideoPlayer';
 
 export default function Home() {
   const theme = useTheme();
@@ -57,7 +58,7 @@ export default function Home() {
             sua realidade financeira!
           </HomeDescription>
 
-          <VideoPlayer thumbnail={clubeautosImage} />
+          <LocalVideoPlayer link="https://player-vz-56779d00-410.tv.pandavideo.com.br/embed/?v=038868bb-eec4-4c32-ae17-a75a740e2b0c" />
 
           <ContainerButton>
             <DefaultButton>QUERO AUMENTAR MINHA RENDA</DefaultButton>
