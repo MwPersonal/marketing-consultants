@@ -9,7 +9,6 @@ import { GlobalStyle } from '@/styles/Global';
 
 import defaultTheme from '@/themes/default';
 
-import WhatsappButton from '@/components/WhatsappButton';
 import LeavePage from '@/components/LeavePage';
 
 import 'rodal/lib/rodal.css';
@@ -36,6 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
           onMouseLeave();
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

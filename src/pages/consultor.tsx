@@ -5,7 +5,7 @@ import { useTheme } from 'styled-components';
 import VideoPlayer from '@/components/VideoPlayer';
 import DefaultButton from '@/components/DefaultButton';
 import Consultants from '@/components/Consultants';
-import Guarantee from '@/components/Guarantee';
+import GuaranteeConsultor from '@/components/GuaranteeConsultor';
 import Footer from '@/components/Footer';
 import CardDetail from '@/components/CardDetail';
 import AnimationBackground from '@/components/AnimationBackground';
@@ -116,7 +116,7 @@ export default function Home() {
         </ContainerButtonOportunity>
       </ContainerContent>
 
-      <Guarantee showGuarantee={false} />
+      <GuaranteeConsultor />
 
       <WhatsappButton />
 

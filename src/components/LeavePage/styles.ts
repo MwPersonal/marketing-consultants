@@ -1,5 +1,4 @@
 import { DefaultSubTitle } from '@/styles/Global';
-import defaultTheme from '@/themes/default';
 import { FaTimes } from 'react-icons/fa';
 import styled from 'styled-components';
 

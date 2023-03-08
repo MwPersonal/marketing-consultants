@@ -1,12 +1,8 @@
-import Image from 'next/image';
-
 import { useInView } from 'react-intersection-observer';
 
 import CounterNumberCrescent from '../CounterNumberCrescent';
 
 import DefaultTextInput from '../DefaultTextInput';
-
-import guaranteeImage from '@/public/images/guarantee.png';
 
 import {
   ButtonSubmit,
@@ -15,9 +11,7 @@ import {
   CompletedBar,
   CompletedText,
   Container,
-  ContainerContent,
   ContainerForm,
-  Description,
   DescriptionForm,
   ListInput,
   Title,
@@ -40,7 +34,7 @@ const CompletedNumber = () => {
   );
 };
 
-const Guarantee: React.FC = () => {
+const GuaranteeConsultor: React.FC = () => {
   const [phoneNumber, setPhoneNumber] = useState(``);
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -52,22 +46,12 @@ const Guarantee: React.FC = () => {
 
   return (
     <Container>
-      <Title>GARANTIA INCONDICIONAL</Title>
-      <ContainerContent>
-        <Image src={guaranteeImage} alt="Guarantee" placeholder="blur" />
-        <Description>
-          Garantimos que ao final da sua formação você receberá uma mentoria com
-          um especialista que irá te direcionar em todos os passos para iniciar
-          suas vendas e sua carreira de consultor de Proteção Veicular Clube
-          Autos.
-        </Description>
-      </ContainerContent>
-
       <ContainerForm
-        action="https://webhook.sellflux.com/webhook/v2/form/lead/6840f4a1c1d164848d46033274dfe8b4?not_query=true&redirect_url=https%3A%2F%2Fwww.vempraclube.com.br%2Fobrigado"
+        action="https://webhook.sellflux.com/webhook/v2/form/lead/507cefd45103934642e8584a58e5e10e?not_query=true&redirect_url=https%3A%2F%2Fwww.vempraclube.com.br%2Fobrigado"
         method="post"
         ref={ref}
       >
+        <Title>GARANTIA INCONDICIONAL</Title>
         {inView && <CompletedNumber />}
         <DescriptionForm>
           Quanto custa pra você não alcançar seus objetivos profissionais?
@@ -137,4 +121,4 @@ const Guarantee: React.FC = () => {
   );
 };
 
-export default Guarantee;
+export default GuaranteeConsultor;
