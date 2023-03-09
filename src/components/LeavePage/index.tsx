@@ -1,4 +1,7 @@
+import { useEffect, useState } from 'react';
 import Rodal from 'rodal';
+
+import { useDebouncedCallback } from 'use-debounce';
 
 import DefaultButton from '../DefaultButton';
 
@@ -12,10 +15,32 @@ import {
   Title,
 } from './styles';
 
-const LeavePage: React.FC<{
-  isVisible: boolean;
-  onClose?: () => void;
-}> = ({ isVisible, onClose }) => {
+const LeavePage: React.FC = () => {
+  const [leavingState, setLeavingState] = useState(false);
+
+  const onMouseLeave = useDebouncedCallback(
+    () => setLeavingState(true),
+    5 * 60 * 1000,
+    { maxWait: 5 * 60 * 1000, leading: true },
+  );
+
+  const onClose = () => setLeavingState(false);
+
+  useEffect(() => {
+    if (document) {
+      document.onmouseleave = (event) => {
+        if (
+          event.clientY <= 0 ||
+          event.clientX <= 0 ||
+          event.clientX >= window.innerWidth ||
+          event.clientY >= window.innerHeight
+        )
+          onMouseLeave();
+      };
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <PortalModal>
       <Rodal
@@ -27,7 +52,7 @@ const LeavePage: React.FC<{
         }}
         className="leave-page"
         showCloseButton={false}
-        visible={isVisible}
+        visible={leavingState}
         onClose={onClose}
         closeOnEsc={true}
       >

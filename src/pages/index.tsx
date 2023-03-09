@@ -16,6 +16,9 @@ import FrequentlyAsked from '@/components/FrequentlyAsked';
 import Guarantee from '@/components/Guarantee';
 import Footer from '@/components/Footer';
 import AnimationBackground from '@/components/AnimationBackground';
+import WhatsappButton from '@/components/WhatsappButton';
+import LocalVideoPlayer from '@/components/LocalVideoPlayer';
+import LeavePage from '@/components/LeavePage';
 
 import {
   CLTTitle,
@@ -29,8 +32,6 @@ import {
   Description,
   Container,
 } from '@/styles/pages/home';
-import WhatsappButton from '@/components/WhatsappButton';
-import LocalVideoPlayer from '@/components/LocalVideoPlayer';
 
 export default function Home() {
   const theme = useTheme();
@@ -41,6 +42,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
+
+      <LeavePage />
 
       <Container>
         <AnimationBackground />

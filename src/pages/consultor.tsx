@@ -8,6 +8,9 @@ import GuaranteeConsultor from '@/components/GuaranteeConsultor';
 import Footer from '@/components/Footer';
 import CardDetail from '@/components/CardDetail';
 import AnimationBackground from '@/components/AnimationBackground';
+import WhatsappButton from '@/components/WhatsappButton';
+import LocalVideoPlayer from '@/components/LocalVideoPlayer';
+import LeavePage from '@/components/LeavePage';
 
 import {
   CLTTitle,
@@ -24,8 +27,6 @@ import {
   ListDetail,
   Container,
 } from '@/styles/pages/consultor';
-import WhatsappButton from '@/components/WhatsappButton';
-import LocalVideoPlayer from '@/components/LocalVideoPlayer';
 
 export default function Home() {
   const theme = useTheme();
@@ -37,6 +38,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
+
+      <LeavePage />
 
       <Container>
         <AnimationBackground />

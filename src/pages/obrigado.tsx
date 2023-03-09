@@ -68,10 +68,6 @@ export default function Home() {
               do nosso processo seletivo, junto algumas informações primordiais!
             </CardContent>
           </ContainerCard>
-          {/*           
-          <ContainerButton>
-            <DefaultButton>GRUPO WHATSAPP</DefaultButton>
-          </ContainerButton> */}
         </HomeMain>
       </Container>
 
