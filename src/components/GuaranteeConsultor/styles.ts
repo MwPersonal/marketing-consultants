@@ -1,4 +1,4 @@
-import { DefaultDescription, DefaultTitle } from '@/styles/Global';
+import { DefaultTitle } from '@/styles/Global';
 
 import styled, { keyframes } from 'styled-components';
 

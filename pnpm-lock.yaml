@@ -11,6 +11,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.51.0
   '@typescript-eslint/parser': 5.51.0
   '@vercel/analytics': 0.1.8
+  animated-number-react: 0.1.2
   commitizen: 4.3.0
   cz-conventional-changelog: 3.3.0
   date-fns: 2.29.3
@@ -40,6 +41,7 @@ specifiers:
 dependencies:
   '@next/font': 13.1.6
   '@vercel/analytics': 0.1.8_react@18.2.0
+  animated-number-react: 0.1.2_biqbaboplfbrettd7655fr4n2y
   date-fns: 2.29.3
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   polished: 4.2.2
@@ -907,6 +909,17 @@ packages:
       require-from-string: 2.0.2
       uri-js: 4.4.1
     dev: true
+
+  /animated-number-react/0.1.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-NsocKXtCKk0cBFITS8lGxRo02QGr4LQLh61S1KUkeEpn30H3fj0Tqz/XSyJeZ6JLJMWOP/8MV/us2Xj9I8DnVw==}
+    peerDependencies:
+      react: '>=0.14'
+      react-dom: '>=0.14'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /ansi-escapes/4.3.2:
     resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}

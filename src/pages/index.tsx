@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useTheme } from 'styled-components';
 
 import TimerAccess from '@/components/TimerAccess';
-import VideoPlayer from '@/components/VideoPlayer';
 import Benefits from '@/components/Benefits';
 import DefaultButton from '@/components/DefaultButton';
 import Consultants from '@/components/Consultants';
@@ -17,8 +16,6 @@ import FrequentlyAsked from '@/components/FrequentlyAsked';
 import Guarantee from '@/components/Guarantee';
 import Footer from '@/components/Footer';
 import AnimationBackground from '@/components/AnimationBackground';
-
-import clubeautosImage from '@/public/images/clubeautos.png';
 
 import {
   CLTTitle,

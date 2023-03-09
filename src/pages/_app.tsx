@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 
 import { useEffect, useState } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
 
 import { ThemeProvider } from 'styled-components';
 import { Analytics } from '@vercel/analytics/react';
@@ -12,7 +13,6 @@ import defaultTheme from '@/themes/default';
 import LeavePage from '@/components/LeavePage';
 
 import 'rodal/lib/rodal.css';
-import { useDebouncedCallback } from 'use-debounce';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [leavingState, setLeavingState] = useState(false);

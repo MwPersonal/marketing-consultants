@@ -1,24 +1,17 @@
-import { useEffect, useRef } from 'react';
-
-import { CounterNumber } from './styles';
+import AnimatedNumber from 'animated-number-react';
 
 const CounterNumberCrescent: React.FC<{
   number: number;
   duration?: number;
 }> = ({ number, duration = 5 }) => {
-  const counterNumber = useRef(null);
-
-  useEffect(() => {
-    (counterNumber?.current as any)?.style.setProperty(`--num`, 0);
-    if (counterNumber?.current) {
-      setTimeout(() => {
-        (counterNumber?.current as any)?.style.setProperty(`--num`, number);
-      }, 10);
-    }
-  }, [number]);
+  const formatValue = (value: number) => Math.floor(value);
 
   return (
-    <CounterNumber ref={counterNumber} number={number} duration={duration} />
+    <AnimatedNumber
+      value={number}
+      formatValue={formatValue}
+      duration={duration * 1000}
+    />
   );
 };
 

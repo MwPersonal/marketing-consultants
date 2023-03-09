@@ -2,15 +2,12 @@ import Head from 'next/head';
 
 import { useTheme } from 'styled-components';
 
-import VideoPlayer from '@/components/VideoPlayer';
 import DefaultButton from '@/components/DefaultButton';
 import Consultants from '@/components/Consultants';
 import GuaranteeConsultor from '@/components/GuaranteeConsultor';
 import Footer from '@/components/Footer';
 import CardDetail from '@/components/CardDetail';
 import AnimationBackground from '@/components/AnimationBackground';
-
-import clubeautosImage from '@/public/images/clubeautos.png';
 
 import {
   CLTTitle,
