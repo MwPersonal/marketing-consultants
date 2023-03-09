@@ -1,6 +1,6 @@
 import { darken } from 'polished';
 import styled, { createGlobalStyle } from 'styled-components';
-import { Montserrat } from '@next/font/google';
+import { Montserrat } from 'next/font/google';
 import Particles from 'react-tsparticles';
 
 const montserrat = Montserrat({
