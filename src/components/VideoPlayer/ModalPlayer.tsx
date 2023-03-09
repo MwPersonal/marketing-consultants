@@ -42,6 +42,7 @@ const ModalPlayer: React.FC<{
                 src={link}
                 title="YouTube video player"
                 frameBorder={0}
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
