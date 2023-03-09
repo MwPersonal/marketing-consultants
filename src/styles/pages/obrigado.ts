@@ -1,9 +1,12 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
-import { DefaultSubTitle, DefaultTitle } from '../Global';
+import { DefaultDescription, DefaultSubTitle, DefaultTitle } from '../Global';
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -18,10 +21,20 @@ export const HomeMain = styled.main`
   position: relative;
   grid-template-columns: repeat(12, minmax(0, 100px));
   column-gap: 20px;
-  padding: 100px 10px;
+  gap: 20px;
+  padding: 0 10px 100px 10px;
 
   @media (max-width: 1024px) {
     padding: 40px 10px;
+  }
+`;
+
+export const HomeLogo = styled(Image)`
+  position: relative;
+
+  @media (max-width: 425px) {
+    width: 80%;
+    height: auto;
   }
 `;
 
@@ -30,13 +43,6 @@ export const HomeTitle = styled(DefaultTitle)`
   text-align: center;
   font-weight: 900;
   color: ${({ theme }) => theme.yellow};
-`;
-
-export const HomeSubTitle = styled(DefaultSubTitle)`
-  grid-column: 1 / 13;
-  text-align: center;
-  font-weight: 700;
-  color: ${({ theme }) => theme.currentLine};
 `;
 
 export const HomeDescription = styled(DefaultSubTitle)`
@@ -51,19 +57,42 @@ export const HomeDescription = styled(DefaultSubTitle)`
   }
 `;
 
-export const ContainerButton = styled.div`
+export const ContainerButton = styled(Link)`
+  width: 80%;
   margin-top: 20px;
-  grid-column: 5 / 9;
+`;
 
-  @media (max-width: 1200px) {
-    grid-column: 4 / 10;
+export const ContainerBar = styled.div`
+  grid-column: 1 / 13;
+  color: ${({ theme }) => theme.currentLine};
+  margin-bottom: 80px;
+`;
+
+export const ContainerCard = styled.div`
+  grid-column: span 6;
+  gap: 20px;
+  background-color: ${({ theme }) => theme.selection}88;
+  color: ${({ theme }) => theme.currentLine};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+  border-radius: 35px;
+
+  @media (max-width: 900px) {
+    grid-column: span 12;
   }
-
-  @media (max-width: 830px) {
-    grid-column: 3 / 11;
-  }
-
-  @media (max-width: 500px) {
-    grid-column: 1 / 13;
+  @media (max-width: 425px) {
+    padding: 20px;
   }
 `;
+
+export const CardTitle = styled(DefaultTitle)`
+  text-align: center;
+`;
+
+export const CardSubTitle = styled(DefaultSubTitle)`
+  color: ${({ theme }) => theme.yellow};
+`;
+
+export const CardContent = styled(DefaultDescription)``;

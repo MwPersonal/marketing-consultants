@@ -1,19 +1,18 @@
+import { ChangeEventHandler, useState } from 'react';
 import Image from 'next/image';
 
 import { useInView } from 'react-intersection-observer';
 
-import CounterNumberCrescent from '../CounterNumberCrescent';
-
 import DefaultTextInput from '../DefaultTextInput';
+import LoadingBar from '../LoadingBar';
 
 import guaranteeImage from '@/public/images/guarantee.png';
+
+import { formatPhoneNumber } from '@/utils/formatPhoneNumber';
 
 import {
   ButtonSubmit,
   ButtonText,
-  Completed,
-  CompletedBar,
-  CompletedText,
   Container,
   ContainerContent,
   ContainerForm,
@@ -22,23 +21,6 @@ import {
   ListInput,
   Title,
 } from './styles';
-import { ChangeEventHandler, useState } from 'react';
-import { formatPhoneNumber } from '@/utils/formatPhoneNumber';
-
-const CompletedNumber = () => {
-  return (
-    <Completed>
-      <CompletedText>
-        <b>
-          <CounterNumberCrescent duration={3} number={95} />%
-        </b>
-        {` `}
-        completo
-      </CompletedText>
-      <CompletedBar porcentage={95} />
-    </Completed>
-  );
-};
 
 const Guarantee: React.FC = () => {
   const [phoneNumber, setPhoneNumber] = useState(``);
@@ -68,7 +50,7 @@ const Guarantee: React.FC = () => {
         method="post"
         ref={ref}
       >
-        {inView && <CompletedNumber />}
+        {inView && <LoadingBar text="completo" duration={3} number={95} />}
         <DescriptionForm>
           Quanto custa pra você não alcançar seus objetivos profissionais?
           <br />
