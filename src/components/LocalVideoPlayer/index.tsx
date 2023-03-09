@@ -7,6 +7,7 @@ const LocalVideoPlayer: React.FC<{
     <>
       <ContainerVideoPlayer>
         <iframe
+          title="Panda video player consultor"
           id="panda-038868bb-eec4-4c32-ae17-a75a740e2b0c"
           src={link}
           loading="lazy"
